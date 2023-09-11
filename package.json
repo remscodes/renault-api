@@ -1,7 +1,7 @@
 {
   "name": "renault-api",
-  "version": "0.1.0-alpha.1",
-  "description": "Unofficial Renault API",
+  "version": "1.0.0",
+  "description": "Renault API",
   "license": "MIT",
   "author": {
     "name": "Rémy Abitbol",
