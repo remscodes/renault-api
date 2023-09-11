@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ES2022",
+    "lib": [
+      "ESNext"
+    ],
+    "baseUrl": "./",
+    "sourceMap": true,
+    "removeComments": true,
+    "downlevelIteration": true,
+    "importHelpers": false,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "pretty": true,
+    "stripInternal": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "src"
+  ]
+}
