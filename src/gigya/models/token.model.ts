@@ -1,11 +1,5 @@
-import type { DateType } from '../../shared.model';
+import type { GigyaResponse } from './gigya-response.model';
 
-export interface Token {
-  callId?: string;
-  errorCode?: number;
-  apiVersion?: number;
-  statusCode?: number;
-  statusReason?: string;
-  time?: DateType;
+export interface Token extends GigyaResponse {
   id_token?: string;
 }
