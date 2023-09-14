@@ -1,2 +1,2 @@
 export type * from './models';
-export {} from './gigya.api';
+export * as GigyaApi from './gigya.api';
