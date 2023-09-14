@@ -1,7 +1,7 @@
 import type { DateType } from '../../shared.model';
-import type { GigyaAuthResponse, GigyaResponse } from './gigya-response.model';
+import type { GigyaAuthResponse } from './gigya-response.model';
 
-export interface AccountInfo extends GigyaResponse, GigyaAuthResponse {
+export interface AccountInfo extends GigyaAuthResponse {
   data?: Data;
   preferences?: Preferences;
   emails?: Emails;

@@ -1,6 +1,6 @@
-import type { GigyaAuthResponse, GigyaResponse } from './gigya-response.model';
+import type { GigyaAuthResponse } from './gigya-response.model';
 
-export interface LoginInfo extends GigyaResponse, GigyaAuthResponse {
+export interface LoginInfo extends GigyaAuthResponse {
   newUser?: boolean;
   sessionInfo?: SessionInfo;
 }

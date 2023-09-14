@@ -14,7 +14,7 @@ export interface GigyaErrorResponse extends GigyaResponse {
   errorMessage?: string;
 }
 
-export interface GigyaAuthResponse {
+export interface GigyaAuthResponse extends GigyaResponse {
   registeredTimestamp?: number;
   UID?: string;
   UIDSignature?: string;
