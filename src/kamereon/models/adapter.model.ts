@@ -1,5 +1,5 @@
-import { DateType } from '../../shared.model';
-import { DataResponse } from './kamereon.model';
+import type { DateType } from '../../shared.model';
+import type { DataResponse } from './kamereon.model';
 
 export type AdapterType =
   | 'kca'

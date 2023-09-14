@@ -1,4 +1,4 @@
-import { DateType } from '../../shared.model';
+import type { DateType } from '../../shared.model';
 
 export interface Vehicles {
   accountId?: string;

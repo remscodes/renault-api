@@ -1,4 +1,4 @@
-import { DataResponse, Vin } from './kamereon.model';
+import type { DataResponse, Vin } from './kamereon.model';
 
 export type CockpitData = DataResponse<Omit<Cockpit, 'id'>>;
 

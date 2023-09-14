@@ -1,5 +1,5 @@
-import { DateType } from '../../shared.model';
-import { DataResponse, Vin } from './kamereon.model';
+import type { DateType } from '../../shared.model';
+import type { DataResponse, Vin } from './kamereon.model';
 
 export type BatteryStatusData = DataResponse<Omit<BatteryStatus, 'id'>>;
 

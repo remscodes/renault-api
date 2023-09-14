@@ -40,7 +40,6 @@ export type KcmActionEndpoint = Prefix<KcmAction, 'charge/'>
 /* ------- */
 
 // Use when Header has 'Accept'='application/vnd.api+json'
-
 export interface DataResponse<T> {
   data: Data<T>;
 }

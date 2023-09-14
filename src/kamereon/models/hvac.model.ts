@@ -1,6 +1,6 @@
-import { DateType } from '../../shared.model';
-import { DataResponse, Vin } from './kamereon.model';
-import { Schedules } from './schedule.model';
+import type { DateType } from '../../shared.model';
+import type { DataResponse, Vin } from './kamereon.model';
+import type { Schedules } from './schedule.model';
 
 export interface HvacStartInputs {
   targetTemperature: number;
