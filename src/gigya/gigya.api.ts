@@ -1,6 +1,7 @@
 const GIGYA_URL = 'https://accounts.eu1.gigya.com' as const satisfies string;
 
 const ACCOUNTS_URL = `${GIGYA_URL}/accounts` as const satisfies string;
+
 const LOGIN_URL = `${ACCOUNTS_URL}.login` as const satisfies string;
 const GET_ACCOUNT_INFO_URL = `${ACCOUNTS_URL}.getAccountInfo` as const satisfies string;
 const GET_JWT_URL = `${ACCOUNTS_URL}.getJWT` as const satisfies string;
@@ -14,8 +15,8 @@ export const GigyaApi = {
    *
    * __Method__ : POST
    *
-   * __URLSearchParams__ :
-   * - **ApiKey** : "3_4LKbCcMMcvjDm3X89LU4z4mNKYKdl_W0oD9w-Jvih21WqgJKtFZAnb9YdUgWT9_a"
+   * __Params__ :
+   * - **apikey** : "3_4LKbCcMMcvjDm3X89LU4z4mNKYKdl_W0oD9w-Jvih21WqgJKtFZAnb9YdUgWT9_a"
    * - **loginID** : (user login)
    * - **password** : (user password)
    *
@@ -29,8 +30,8 @@ export const GigyaApi = {
    *
    * __Method__ : POST
    *
-   * __URLSearchParams__ :
-   * - **ApiKey** : "3_4LKbCcMMcvjDm3X89LU4z4mNKYKdl_W0oD9w-Jvih21WqgJKtFZAnb9YdUgWT9_a"
+   * __Params__ :
+   * - **apikey** : "3_4LKbCcMMcvjDm3X89LU4z4mNKYKdl_W0oD9w-Jvih21WqgJKtFZAnb9YdUgWT9_a"
    * - **login_token** : (Gigya token retrieved with login API)
    *
    * __Response Model__ : AccountInfo
@@ -43,8 +44,8 @@ export const GigyaApi = {
    *
    * __Method__ : POST
    *
-   * __URLSearchParams__ :
-   * - **ApiKey** : "3_4LKbCcMMcvjDm3X89LU4z4mNKYKdl_W0oD9w-Jvih21WqgJKtFZAnb9YdUgWT9_a"
+   * __Params__ :
+   * - **apikey** : "3_4LKbCcMMcvjDm3X89LU4z4mNKYKdl_W0oD9w-Jvih21WqgJKtFZAnb9YdUgWT9_a"
    * - **login_token** : (Gigya token retrieved with login API)
    * - **fields** : "data.personId,data.gigyaDataCenter"
    * - **expiration** : (expiration of JWT in millisecond)
