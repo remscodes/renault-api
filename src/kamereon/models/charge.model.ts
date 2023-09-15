@@ -9,18 +9,18 @@ export interface ChargeModeInputs {
 export type ChargeModeType =
   | 'always'
   | 'always_charging'
-  | 'schedule'
+  | 'schedule_mode'
 
 /* ------- */
 
 export interface ChargeStartInputs {
-
+  action: 'start';
 }
 
 /* ------- */
 
 export interface ChargeStopInputs {
-
+  action: 'stop';
 }
 
 /* ------- */

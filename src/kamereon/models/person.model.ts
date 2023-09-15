@@ -56,7 +56,7 @@ interface PreferredDealer {
   functionalModificationDate?: DateType;
 }
 
-export interface Account {
+interface Account {
   accountId?: string;
   accountType?: string;
   accountStatus?: string;

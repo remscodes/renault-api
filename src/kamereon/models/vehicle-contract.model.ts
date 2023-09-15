@@ -14,7 +14,7 @@ export interface VehicleContract {
   conditions?: Condition[];
 }
 
-export interface Condition {
+interface Condition {
   startDate?: DateType;
   endDate?: DateType;
   unlimitedMileage?: boolean;

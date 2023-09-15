@@ -36,8 +36,15 @@ export interface HvacSessions {
 export type HvacStatusData = DataResponse<HvacStatus>
 
 export interface HvacStatus {
-
+  id?: Vin;
+  socThreshold?: number;
+  hvacStatus?: HvacStatusType;
+  lastUpdateTime?: DateType;
 }
+
+export type HvacStatusType =
+  | 'on'
+  | 'off'
 
 /* ------- */
 

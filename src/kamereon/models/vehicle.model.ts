@@ -22,13 +22,13 @@ export interface VehicleLink {
   vehicleDetails?: VehicleDetails;
 }
 
-export interface ConnectedDriver {
+interface ConnectedDriver {
   role?: string;
   createdDate?: DateType;
   lastModifiedDate?: DateType;
 }
 
-export interface PreferredDealer {
+interface PreferredDealer {
   dealerId?: string;
   dealerName?: string;
   brand?: string;
@@ -69,40 +69,40 @@ export interface VehicleDetails {
   radioCode?: string;
 }
 
-export interface Asset {
+interface Asset {
   assetType?: string;
   viewpoint?: ImageViewpointType;
   renditions?: Rendition[];
 }
 
-export type ImageViewpointType =
+type ImageViewpointType =
   | 'mybrand_2'
   | 'mybrand_5'
 
-export interface Rendition {
+interface Rendition {
   resolutionType?: ImageResolutionType;
   url?: string;
 }
 
-export type ImageResolutionType =
+type ImageResolutionType =
   | 'ONE_MYRENAULT_LARGE'
   | 'ONE_MYRENAULT_SMALL'
 
-export interface Tag {
+interface Tag {
   code?: string;
   label?: string;
   group?: string;
 }
 
-export interface Brand {
+interface Brand {
   label?: string;
 }
 
-export interface DeliveryCountry {
+interface DeliveryCountry {
   code?: string;
   label?: string;
 }
 
-export interface RegistrationCountry {
+interface RegistrationCountry {
   code?: string;
 }

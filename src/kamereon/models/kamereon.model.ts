@@ -39,14 +39,14 @@ export type KcmActionEndpoint = Prefix<KcmAction, 'charge/'>
 
 /* ------- */
 
-// Use when Header has 'Accept'='application/vnd.api+json'
+// Use when Header has not 'Accept'='application/json'
 export interface DataResponse<T> {
   data: Data<T>;
 }
 
 interface Data<T> {
   type?: 'Car';
-  id?: Vin | string;
+  id?: Vin;
   attributes?: T;
 }
 

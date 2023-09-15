@@ -7,9 +7,9 @@ export type AdapterType =
 
 /* ------- */
 
-export type AdapterData = DataResponse<Omit<Adapter, 'uuid'>>;
+export type AdapterInfoData = DataResponse<Omit<AdapterInfo, 'uuid'>>;
 
-export interface Adapter {
+export interface AdapterInfo {
   uuid?: string;
   vin?: string;
   vehicleId?: null;

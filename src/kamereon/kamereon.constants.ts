@@ -1,4 +1,4 @@
-import type { Period } from './models/date-filter.model';
+import type { Period } from './models';
 import type { Action, KcaActionEndpoint, KcmActionEndpoint, ReadEndpoint, Version } from './models/kamereon.model';
 
 export const KCA_READ_ENDPOINTS = {
