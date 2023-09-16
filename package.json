@@ -1,7 +1,7 @@
 {
   "name": "renault-api",
   "version": "1.0.0",
-  "description": "Renault API",
+  "description": "Resources url and models to use the Renault API",
   "license": "MIT",
   "author": {
     "name": "Rémy Abitbol",
@@ -42,13 +42,12 @@
     "node": ">=18.13.0"
   },
   "devDependencies": {
-    "@types/node": "^18.17.15",
+    "@types/node": "^18.17.16",
     "typescript": "^5.2.2"
   },
   "keywords": [
-    "renault",
-    "api"
+    "renault"
   ],
-  "packageManager": "pnpm@8.7.4",
+  "packageManager": "pnpm@8.7.5",
   "sideEffects": false
 }
