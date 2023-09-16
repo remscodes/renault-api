@@ -12,7 +12,7 @@
 
 </div>
 
-> Get everything you need to use Renault's API into TypeScript/JavaScript project.
+> Get everything you need to use the Renault API into TypeScript/JavaScript project.
 
 ## Installation
 
