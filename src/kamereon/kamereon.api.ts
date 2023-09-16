@@ -178,8 +178,6 @@ export const KamereonApi = {
    * - **end**: (end date format YYYYMMDD)
    *
    * __Response Model__ : ChargeHistory
-   *
-   * __\/!\\__ Not work for Megane E-Tech __\/!\\__
    */
   READ_CHARGE_HISTORY_URL,
 
@@ -270,8 +268,6 @@ export const KamereonApi = {
    * - **end**: (end date format YYYYMMDD)
    *
    * __Response Model__ : HvacHistory
-   *
-   * __\/!\\__ Not work for Megane E-Tech __\/!\\__
    */
   READ_HVAC_HISTORY_URL,
 
@@ -291,8 +287,6 @@ export const KamereonApi = {
    * - **end**: (end date format YYYYMMDD)
    *
    * __Response Model__ : HvacSessions
-   *
-   * __\/!\\__ Not work for Megane E-Tech __\/!\\__
    */
   READ_HVAC_SESSIONS_URL,
 
@@ -310,8 +304,6 @@ export const KamereonApi = {
    * - **country** : "FR"
    *
    * __Response Model__ : HvacStatus
-   *
-   * __\/!\\__ Not work for Megane E-Tech __\/!\\__
    */
   READ_HVAC_STATUS_URL,
 
@@ -382,8 +374,6 @@ export const KamereonApi = {
    * - **country** : "FR"
    *
    * __Response Model__ : NotificationSettings
-   *
-   * __\/!\\__ Not work for Megane E-Tech __\/!\\__
    */
   READ_NOTIFICATION_SETTINGS_URL,
 
@@ -401,8 +391,6 @@ export const KamereonApi = {
    * - **country** : "FR"
    *
    * __Response Model__ : ResState
-   *
-   * __\/!\\__ Not work for Megane E-Tech __\/!\\__
    */
   READ_RES_STATE_URL,
 
