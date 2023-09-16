@@ -1,7 +1,8 @@
 import { KCA_ACTION_ENDPOINTS, KCA_READ_ENDPOINTS, KCM_ACTION_ENDPOINTS } from './kamereon.constants';
 import type { ActionEndpoint, ReadEndpoint, Version } from './models/kamereon.model';
 
-const KAMEREON_URL = 'https://api-wired-prod-1-euw1.wrd-aws.com';
+const KAMEREON_URL = 'https://api-wired-prod-1-euw1.wrd-aws.com' as const satisfies string;
+const KAMEREON_API_KEY = 'YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J' as const satisfies string;
 
 const COMMERCE_URL = `${KAMEREON_URL}/commerce/v1` as const satisfies string;
 const ACCOUNT_URL = (accountId: string) => `${COMMERCE_URL}/accounts/${accountId}` as const satisfies string;
@@ -47,12 +48,18 @@ const PERFORM_PAUSE_RESUME_URL = (accountId: string, vin: string) => PERFORM_VEH
  */
 export const KamereonApi = {
   /**
+   * Kamereon API KEY.
+   *
+   * For every request, put it as value for the header "apikey".
+   */
+  KEY: KAMEREON_API_KEY,
+  /**
    * __Description__ : Get info of authenticated person. Required to retrieve **accountId**.
    *
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -70,7 +77,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -87,7 +94,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -109,7 +116,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -126,7 +133,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -143,7 +150,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -160,7 +167,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -182,7 +189,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -199,7 +206,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -218,7 +225,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -235,7 +242,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -252,7 +259,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -274,7 +281,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -295,7 +302,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -314,7 +321,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -331,7 +338,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -348,7 +355,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -367,7 +374,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -386,7 +393,7 @@ export const KamereonApi = {
    * __Method__ : GET
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    *
@@ -405,7 +412,7 @@ export const KamereonApi = {
    * __Method__ : POST
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    * - **Content-Type** : "application/vnd.api+json"
@@ -429,7 +436,7 @@ export const KamereonApi = {
    * __Method__ : POST
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    * - **Content-Type** : "application/vnd.api+json"
@@ -467,7 +474,7 @@ export const KamereonApi = {
    * __Method__ : POST
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    * - **Content-Type** : "application/vnd.api+json"
@@ -491,7 +498,7 @@ export const KamereonApi = {
    * __Method__ : POST
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    * - **Content-Type** : "application/vnd.api+json"
@@ -526,7 +533,7 @@ export const KamereonApi = {
    * __Method__ : POST
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    * - **Content-Type** : "application/vnd.api+json"
@@ -561,7 +568,7 @@ export const KamereonApi = {
    * __Method__ : POST
    *
    * __Headers__ :
-   * - **apikey** : "YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J"
+   * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
    * - **Accept** : "application/json"
    * - **Content-Type** : "application/vnd.api+json"
