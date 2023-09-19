@@ -4,6 +4,7 @@ export type * from './battery-status.model';
 export type * from './cockpit.model';
 export type * from './date-filter.model';
 export type * from './hvac.model';
+export type * from './kamereon.model';
 export type * from './location.model';
 export type * from './lock-status.model';
 export type * from './notification.model';
