@@ -6,8 +6,8 @@
 <div align="center">
 
 [![github ci](https://img.shields.io/github/actions/workflow/status/remscodes/renault-api/npm-ci.yml.svg?logo=github&label=CI&style=for-the-badge)](https://github.com/remscodes/renault-api/actions/workflows/npm-ci.yml)
-[![npm version](https://img.shields.io/npm/v/renault-api.svg?style=for-the-badge&logo=npm)](https://www.npmjs.org/package/renault-api)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/renault-api.svg?style=for-the-badge)](https://bundlephobia.com/package/renault-api)
+[![npm version](https://img.shields.io/npm/v/@remscodes/renault-api.svg?style=for-the-badge&logo=npm)](https://www.npmjs.org/package/@remscodes/renault-api)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@remscodes/renault-api.svg?style=for-the-badge)](https://bundlephobia.com/package/@remscodes/renault-api)
 [![license](https://img.shields.io/github/license/remscodes/renault-api.svg?style=for-the-badge)](LICENSE)
 
 </div>
