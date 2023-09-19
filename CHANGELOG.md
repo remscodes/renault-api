@@ -1,3 +1,13 @@
+# 1.0.1 (2023-09-19)
+
+### Fixes
+
+- Fix README.
+
+- Add missing exports.
+
+> Commits : https://github.com/remscodes/renault-api/commits/v1.0.1
+
 # 1.0.0 (2023-09-16)
 
 ### Features
