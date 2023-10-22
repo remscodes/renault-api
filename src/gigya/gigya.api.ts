@@ -6,6 +6,8 @@ const ACCOUNTS_URL = `${GIGYA_URL}/accounts` as const satisfies string;
 const LOGIN_URL = `${ACCOUNTS_URL}.login` as const satisfies string;
 const GET_ACCOUNT_INFO_URL = `${ACCOUNTS_URL}.getAccountInfo` as const satisfies string;
 const GET_JWT_URL = `${ACCOUNTS_URL}.getJWT` as const satisfies string;
+const GET_JWT_PUBLIC_KEY_URL = `${ACCOUNTS_URL}.getJWTPublicKey` as const satisfies string;
+const LOGOUT_URL = `${ACCOUNTS_URL}.logout` as const satisfies string;
 
 /**
  * Gigya API for authentication
@@ -60,5 +62,31 @@ export const GigyaApi = {
    * __Response Model__ : Token
    * (**id_token** stored in Token.id_token)
    */
-  GET_JWT_URL
+  GET_JWT_URL,
+
+  /**
+   * __Description__ : Get public info about JWT key.
+   *
+   * __Method__ : POST
+   *
+   * __Params__ :
+   * - **apikey** : GigyaApi.KEY
+   * - **login_token** : (Gigya token retrieved with login API)
+   *
+   * __Response Model__ : TokenPublicKey
+   */
+  GET_JWT_PUBLIC_KEY_URL,
+
+  /**
+   * __Description__ : Logout from Gigya service.
+   *
+   * __Method__ : POST
+   *
+   * __Params__ :
+   * - **apikey** : GigyaApi.KEY
+   * - **login_token** : (Gigya token retrieved with login API)
+   *
+   * __Response Model__ : LogoutInfo
+   */
+  LOGOUT_URL
 };

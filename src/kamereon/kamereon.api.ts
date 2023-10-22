@@ -1,5 +1,5 @@
 import { KCA_ACTION_ENDPOINTS, KCA_READ_ENDPOINTS, KCM_ACTION_ENDPOINTS } from './kamereon.constants';
-import type { ActionEndpoint, ReadEndpoint, Version } from './models/kamereon.model';
+import type { ActionEndpoint, ReadEndpoint, Version } from './models';
 
 const KAMEREON_URL = 'https://api-wired-prod-1-euw1.wrd-aws.com' as const satisfies string;
 const KAMEREON_API_KEY = 'YjkKtHmGfaceeuExUDKGxrLZGGvtVS0J' as const satisfies string;
@@ -18,16 +18,18 @@ const VEHICLE_DETAILS_URL = (accountId: string, vin: string) => `${ACCOUNT_URL(a
 const READ_VEHICLE_KCA_DATA_URL = <V extends Version['version'], E extends ReadEndpoint>(accountId: string, vin: string, version: V, endpoint: E) => `${CAR_KCA_ADAPTER_URL<V>(accountId, vin, version)}/${endpoint}` as const satisfies string;
 
 const READ_ADAPTER_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS[''].version, '');
+const READ_BATTERY_INHIBITION_STATUS_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['battery-inhibition-status'].version, 'battery-inhibition-status');
 const READ_BATTERY_STATUS_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['battery-status'].version, 'battery-status');
 const READ_CHARGE_HISTORY_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['charge-history'].version, 'charge-history');
 const READ_CHARGE_MODE_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['charge-mode'].version, 'charge-mode');
+const READ_CHARGE_SCHEDULE_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['charge-schedule'].version, 'charge-schedule');
 const READ_CHARGES_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['charges'].version, 'charges');
 const READ_CHARGING_SETTINGS_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['charging-settings'].version, 'charging-settings');
 const READ_COCKPIT_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['cockpit'].version, 'cockpit');
 const READ_HVAC_HISTORY_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['hvac-history'].version, 'hvac-history');
 const READ_HVAC_SESSIONS_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['hvac-sessions'].version, 'hvac-sessions');
-const READ_HVAC_STATUS_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['hvac-status'].version, 'hvac-status');
 const READ_HVAC_SETTINGS_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['hvac-settings'].version, 'hvac-settings');
+const READ_HVAC_STATUS_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['hvac-status'].version, 'hvac-status');
 const READ_LOCATION_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['location'].version, 'location');
 const READ_LOCK_STATUS_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['lock-status'].version, 'lock-status');
 const READ_NOTIFICATION_SETTINGS_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['notification-settings'].version, 'notification-settings');
@@ -159,6 +161,23 @@ export const KamereonApi = {
    *
    * __Response Model__ : BatteryStatus
    */
+  READ_BATTERY_INHIBITION_STATUS_URL,
+
+  /**
+   * __Description__ : Get vehicle battery status.
+   *
+   * __Method__ : GET
+   *
+   * __Headers__ :
+   * - **apikey** : KamereonApi.KEY
+   * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
+   * - **Accept** : "application/json"
+   *
+   * __Params__ :
+   * - **country** : "FR"
+   *
+   * __Response Model__ : BatteryStatus
+   */
   READ_BATTERY_STATUS_URL,
 
   /**
@@ -198,6 +217,22 @@ export const KamereonApi = {
    */
   READ_CHARGE_MODE_URL,
 
+  /**
+   * __Description__ : Get vehicle charge schedule.
+   *
+   * __Method__ : GET
+   *
+   * __Headers__ :
+   * - **apikey** : KamereonApi.KEY
+   * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
+   * - **Accept** : "application/json"
+   *
+   * __Params__ :
+   * - **country** : "FR"
+   *
+   * __Response Model__ : ChargeSchedule
+   */
+  READ_CHARGE_SCHEDULE_URL,
   /**
    * __Description__ : Get vehicle charges.
    *
@@ -410,11 +445,15 @@ export const KamereonApi = {
    *
    * __Body__ :
    * {
-   *    "type": "ChargeMode",
-   *    "attributes": {
-   *        "action": **("always" | "always_charging" | "schedule_mode")**
-   *    }
+   *   data: {
+   *      "type": "ChargeMode",
+   *      "attributes": {
+   *        "action": **("always_charging" | "always_charging" | "schedule_mode")**
+   *      }
+   *   }
    * }
+   *
+   * __Response Model__ : ActionChargeMode
    */
   PERFORM_CHARGE_MODE_URL,
 
@@ -434,17 +473,19 @@ export const KamereonApi = {
    *
    * __Body__ :
    * {
-   *   "type": "ChargeSchedule",
-   *   "attributes": {
-   *      "schedules": {
-   *        "activated": **(boolean)**;
-   *        "monday": DaySchedule,
-   *        "tuesday": DaySchedule,
-   *        "wednesday": DaySchedule,
-   *        "thursday": DaySchedule,
-   *        "friday": DaySchedule,
-   *        "saturday": DaySchedule,
-   *        "sunday": DaySchedule
+   *   data: {
+   *      "type": "ChargeSchedule",
+   *      "attributes": {
+   *        "schedules": {
+   *          "activated": **(boolean)**;
+   *          "monday": DaySchedule,
+   *          "tuesday": DaySchedule,
+   *          "wednesday": DaySchedule,
+   *          "thursday": DaySchedule,
+   *          "friday": DaySchedule,
+   *          "saturday": DaySchedule,
+   *          "sunday": DaySchedule
+   *        }
    *      }
    *   }
    * }
@@ -472,9 +513,11 @@ export const KamereonApi = {
    *
    * __Body__ :
    * {
-   *    "type": "ChargingStart",
-   *    "attributes": {
+   *    data: {
+   *      "type": "ChargingStart",
+   *      "attributes": {
    *        "action": **("start" | "stop")**
+   *      }
    *    }
    * }
    */
@@ -496,17 +539,19 @@ export const KamereonApi = {
    *
    * __Body__ :
    * {
-   *   "type": "HvacSchedule",
-   *   "attributes": {
-   *      "schedules": {
-   *        "activated": **(boolean)**;
-   *        "monday": HvacDaySchedule,
-   *        "tuesday": HvacDaySchedule,
-   *        "wednesday": HvacDaySchedule,
-   *        "thursday": HvacDaySchedule,
-   *        "friday": HvacDaySchedule,
-   *        "saturday": HvacDaySchedule,
-   *        "sunday": HvacDaySchedule
+   *   data: {
+   *     "type": "HvacSchedule",
+   *      "attributes": {
+   *        "schedules": {
+   *          "activated": **(boolean)**;
+   *          "monday": HvacDaySchedule,
+   *          "tuesday": HvacDaySchedule,
+   *          "wednesday": HvacDaySchedule,
+   *          "thursday": HvacDaySchedule,
+   *          "friday": HvacDaySchedule,
+   *          "saturday": HvacDaySchedule,
+   *          "sunday": HvacDaySchedule
+   *        }
    *      }
    *   }
    * }
@@ -531,20 +576,24 @@ export const KamereonApi = {
    *
    * __Body__ :
    * {
-   *   "type": "HvacStart",
-   *   "attributes": {
-   *      "action": "start",
-   *      "targetTemperature": **(temperature as number)**,
-   *      "startDateTime"?: **(date format YYYY-MM-DDTHH:mm:ssZ)**
+   *   data: {
+   *     "type": "HvacStart",
+   *      "attributes": {
+   *        "action": "start",
+   *        "targetTemperature": **(temperature as number)**,
+   *        "startDateTime"?: **(date format YYYY-MM-DDTHH:mm:ssZ)**
+   *      }
    *   }
    * }
    *
    * OR
    *
    * {
-   *   "type": "HvacStart",
-   *   "attributes": {
-   *      "action": "cancel"
+   *   data: {
+   *     "type": "HvacStart",
+   *      "attributes": {
+   *        "action": "cancel"
+   *      }
    *   }
    * }
    */
@@ -566,9 +615,11 @@ export const KamereonApi = {
    *
    * __Body__ :
    * {
-   *    "type": "ChargePauseResume",
-   *    "attributes": {
+   *    data: {
+   *      "type": "ChargePauseResume",
+   *      "attributes": {
    *        "action": **("resume" | "pause")**
+   *      }
    *    }
    * }
    */
