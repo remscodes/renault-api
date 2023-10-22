@@ -60,3 +60,10 @@ export interface HvacSettings extends Schedules<HvacDaySchedule, { targetTempera
 export type HvacMode =
   | 'instant'
 
+/* ------- */
+
+export type ActionRefreshHvacStatusData = DataResponse<{}, 'RefreshHvacStatus'>
+
+export interface ActionRefreshHvacStatus {
+  id?: string;
+}

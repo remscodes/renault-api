@@ -1,27 +1,18 @@
-import type { DateType } from '../../shared.model';
+import type { DateType, Day } from '../../shared.model';
 import type { DataResponse, Vin } from './kamereon.model';
 import type { Schedules } from './schedule.model';
 
 export interface ChargeModeInputs {
-  action: ChargeModeType;
+  action: ChargeModeAction;
 }
 
-export type ChargeModeType =
-  | 'always'
+export type ChargeModeAction =
+// Instant Charging
   | 'always_charging'
+  // Delayed Charging
+  | ''
+  // Custom Charging
   | 'schedule_mode'
-
-/* ------- */
-
-export interface ChargeStartInputs {
-  action: 'start';
-}
-
-/* ------- */
-
-export interface ChargeStopInputs {
-  action: 'stop';
-}
 
 /* ------- */
 
@@ -62,14 +53,24 @@ export interface ChargeMode {
 
 export type ChargeModeStatus =
   | 'always'
-  | 'generic_unknown'
-  | 'pause_resume'
-  | 'scheduled'
   | 'delayed'
-  | 'delegated'
-  | 'offpeak'
-  | 'pause'
-  | 'resume'
+  | 'scheduled'
+
+/* ------- */
+
+export type ChargeScheduleData = DataResponse<ChargeSchedule>
+
+export interface ChargeSchedule {
+  id?: Vin;
+  calendar?: Record<Day, Sched[]>;
+}
+
+interface Sched {
+  // Format HHMM
+  startTime?: string;
+  duration?: number;
+  activationState?: boolean;
+}
 
 /* ------- */
 
@@ -107,5 +108,12 @@ export type ChargingSettingsData = DataResponse<Omit<ChargingSettings, 'id'>>
 export interface ChargingSettings extends Schedules<ChargeDaySchedule> {
   id?: Vin;
   dateTime?: DateType;
-  mode?: ChargeModeType;
+  mode?: ChargeModeAction;
+}
+
+/* ------- */
+
+export interface ActionChargeMode {
+  id?: string;
+  action?: ChargeModeAction;
 }

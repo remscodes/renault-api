@@ -10,3 +10,11 @@ export interface VehicleLocation {
   gpsLongitude?: number;
   lastUpdateTime?: DateType;
 }
+
+/* ------- */
+
+export type ActionRefreshLocationData = DataResponse<{}, 'RefreshLocation'>
+
+export interface ActionRefreshLocation {
+  id?: string;
+}

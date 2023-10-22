@@ -3,15 +3,17 @@ import type { Prefix } from '../../shared.model';
 type KcaEndpoint =
   | ''
   | 'battery-status'
+  | 'battery-inhibition-status'
   | 'charge-history'
   | 'charge-mode'
+  | 'charge-schedule'
   | 'charges'
   | 'charging-settings'
   | 'cockpit'
   | 'hvac-history'
   | 'hvac-sessions'
-  | 'hvac-status'
   | 'hvac-settings'
+  | 'hvac-status'
   | 'location'
   | 'lock-status'
   | 'notification-settings'
@@ -27,6 +29,10 @@ type KcaAction =
   | 'charging-start'
   | 'hvac-schedule'
   | 'hvac-start'
+  | 'refresh-battery-status'
+  | 'refresh-hvac-status'
+  | 'refresh-location'
+  | 'send-navigation'
 
 export type KcaActionEndpoint = Prefix<KcaAction, 'actions/'>
 
@@ -40,14 +46,14 @@ export type KcmActionEndpoint = Prefix<KcmAction, 'charge/'>
 /* ------- */
 
 // Use when Header has not 'Accept'='application/json'
-export interface DataResponse<T> {
-  data: Data<T>;
+export interface DataResponse<A, T = 'Car'> {
+  data: Data<A, T>;
 }
 
-interface Data<T> {
-  type?: 'Car';
+interface Data<A, T> {
+  type?: T;
   id?: Vin;
-  attributes?: T;
+  attributes?: A;
 }
 
 /* ------- */
@@ -61,12 +67,22 @@ export interface Action extends Version {
 }
 
 type ActionType =
+  | KcaActionType
+  | KcmActionType
+
+type KcaActionType =
   | 'ChargeMode'
   | 'ChargeSchedule'
   | 'ChargingStart'
   | 'HvacSchedule'
   | 'HvacStart'
-  | 'ChargePauseResume';
+  | 'RefreshBatteryStatus'
+  | 'RefreshHvacStatus'
+  | 'RefreshLocation'
+  | 'SendNavigation'
+
+type KcmActionType =
+  | 'ChargePauseResume'
 
 /* ------- */
 
@@ -75,9 +91,5 @@ export interface Version {
 }
 
 /* ------- */
-
-export interface PerformedAction<T> {
-
-}
 
 export type Vin = string

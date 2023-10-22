@@ -17,6 +17,16 @@ export interface BatteryStatus {
   chargingInstantaneousPower: number;
 }
 
+/* ------- */
+
+export type ActionRefreshBatteryStatusData = DataResponse<{}, 'RefreshBatteryStatus'>
+
+export interface ActionRefreshBatteryStatus {
+  id?: string;
+}
+
+/* ------- */
+
 export enum ChargingStatus {
   CHARGE_NOT_BLOCKED = - 1,
   CHARGE_BLOCKED = 0,
