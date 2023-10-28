@@ -59,8 +59,8 @@ export const GigyaApi = {
    * - **fields** : "data.personId,data.gigyaDataCenter"
    * - **expiration** : (expiration of JWT in millisecond)
    *
-   * __Response Model__ : Token
-   * (**id_token** stored in Token.id_token)
+   * __Response Model__ : TokenInfo
+   * (**id_token** stored in TokenInfo.id_token)
    */
   GET_JWT_URL,
 

@@ -1,6 +1,9 @@
 import type { DateType } from '../../shared.model';
 import type { GigyaAuthResponse } from './gigya-response.model';
 
+/**
+ * Response model of Gigya Account API.
+ */
 export interface AccountInfo extends GigyaAuthResponse {
   data?: Data;
   preferences?: Preferences;

@@ -1,5 +1,8 @@
 import type { DateType } from '../../shared.model';
 
+/**
+ * Common response model of Gigya API.
+ */
 export interface GigyaResponse {
   callId?: string;
   errorCode?: number;
@@ -9,11 +12,17 @@ export interface GigyaResponse {
   time?: DateType;
 }
 
+/**
+ * Common error response model of Gigya API.
+ */
 export interface GigyaErrorResponse extends GigyaResponse {
   errorDetails?: string;
   errorMessage?: string;
 }
 
+/**
+ * Common response model of Gigya Login and Account API.
+ */
 export interface GigyaAuthResponse extends GigyaResponse {
   registeredTimestamp?: number;
   UID?: string;

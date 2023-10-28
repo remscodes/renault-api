@@ -1,6 +1,9 @@
 import type { GigyaResponse } from './gigya-response.model';
 
-export interface Token extends GigyaResponse {
+/**
+ * Response model of Gigya Token API.
+ */
+export interface TokenInfo extends GigyaResponse {
   id_token?: string;
 }
 
