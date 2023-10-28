@@ -1,5 +1,8 @@
 import type { DateType } from '../../shared.model';
 
+/**
+ * Response model for Kamereon Person API.
+ */
 export interface Person {
   personId?: string;
   type?: string;

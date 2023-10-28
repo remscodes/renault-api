@@ -1,5 +1,8 @@
 import type { DateType } from '../../shared.model';
 
+/**
+ * Response model for Kamereon VehicleContract API.
+ */
 export interface VehicleContract {
   type?: string;
   contractId?: string;

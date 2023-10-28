@@ -25,16 +25,28 @@ export interface HvacHistory {
 
 /* ------- */
 
+/**
+ * Response model for Kamereon HVAC API.
+ */
 export type HvacSessionsData = DataResponse<HvacSessions>
 
+/**
+ * Response model for Kamereon HVAC API when request header "accept"="application/json".
+ */
 export interface HvacSessions {
 
 }
 
 /* ------- */
 
+/**
+ * Response model for Kamereon HVAC API.
+ */
 export type HvacStatusData = DataResponse<HvacStatus>
 
+/**
+ * Response model for Kamereon HVAC API when request header "accept"="application/json".
+ */
 export interface HvacStatus {
   id?: Vin;
   socThreshold?: number;
@@ -48,8 +60,14 @@ export type HvacStatusType =
 
 /* ------- */
 
+/**
+ * Response model for Kamereon HVAC API.
+ */
 export type HvacSettingsData = DataResponse<Omit<HvacSettings, 'id'>>
 
+/**
+ * Response model for Kamereon HVAC API when request header "accept"="application/json".
+ */
 export interface HvacSettings extends Schedules<HvacDaySchedule, { targetTemperature?: number }> {
   id?: Vin;
   dateTime?: DateType;

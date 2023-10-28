@@ -63,7 +63,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -81,7 +81,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -98,7 +98,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -120,7 +120,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -137,7 +137,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -154,7 +154,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -171,7 +171,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -188,7 +188,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -208,7 +208,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -225,7 +225,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -241,7 +241,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -260,7 +260,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -277,7 +277,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -294,7 +294,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -314,7 +314,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -333,7 +333,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -350,7 +350,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -367,7 +367,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -384,7 +384,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -403,7 +403,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -420,7 +420,7 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
+   * - **accept** : "application/json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -437,8 +437,8 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
-   * - **Content-Type** : "application/vnd.api+json"
+   * - **accept** : "application/json"
+   * - **content-type** : "application/vnd.api+json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -465,8 +465,8 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
-   * - **Content-Type** : "application/vnd.api+json"
+   * - **accept** : "application/json"
+   * - **content-type** : "application/vnd.api+json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -505,8 +505,8 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
-   * - **Content-Type** : "application/vnd.api+json"
+   * - **accept** : "application/json"
+   * - **content-type** : "application/vnd.api+json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -531,8 +531,8 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
-   * - **Content-Type** : "application/vnd.api+json"
+   * - **accept** : "application/json"
+   * - **content-type** : "application/vnd.api+json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -568,8 +568,8 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
-   * - **Content-Type** : "application/vnd.api+json"
+   * - **accept** : "application/json"
+   * - **content-type** : "application/vnd.api+json"
    *
    * __Params__ :
    * - **country** : "FR"
@@ -607,8 +607,8 @@ export const KamereonApi = {
    * __Headers__ :
    * - **apikey** : KamereonApi.KEY
    * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
-   * - **Accept** : "application/json"
-   * - **Content-Type** : "application/vnd.api+json"
+   * - **accept** : "application/json"
+   * - **content-type** : "application/vnd.api+json"
    *
    * __Params__ :
    * - **country** : "FR"

@@ -1,5 +1,8 @@
 import type { DateType } from '../../shared.model';
 
+/**
+ * Response model for Kamereon Account API.
+ */
 export interface Vehicles {
   accountId?: string;
   country?: string;

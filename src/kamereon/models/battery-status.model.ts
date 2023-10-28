@@ -1,8 +1,14 @@
 import type { DateType } from '../../shared.model';
 import type { DataResponse, Vin } from './kamereon.model';
 
+/**
+ * Response model for Kamereon Battery API.
+ */
 export type BatteryStatusData = DataResponse<Omit<BatteryStatus, 'id'>>;
 
+/**
+ * Response model for Kamereon Battery API when request header "accept"="application/json".
+ */
 export interface BatteryStatus {
   id?: Vin;
   timestamp: DateType;

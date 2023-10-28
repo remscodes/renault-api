@@ -7,8 +7,14 @@ export type AdapterType =
 
 /* ------- */
 
+/**
+ * Response model for Kamereon Adapter API.
+ */
 export type AdapterInfoData = DataResponse<Omit<AdapterInfo, 'uuid'>>;
 
+/**
+ * Response model for Kamereon Adapter API when request header "accept"="application/json".
+ */
 export interface AdapterInfo {
   uuid?: string;
   vin?: string;

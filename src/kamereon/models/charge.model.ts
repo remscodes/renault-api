@@ -27,8 +27,14 @@ export interface ChargeDaySchedule {
 
 /* ------- */
 
+/**
+ * Response model for Kamereon Charge API.
+ */
 export type ChargeHistoryData = DataResponse<Omit<ChargeHistory, 'id'>>
 
+/**
+ * Response model for Kamereon Charge API when request header "accept"="application/json".
+ */
 export interface ChargeHistory {
   id?: Vin;
   chargeSummaries?: ChargeSummary[];
@@ -44,8 +50,14 @@ export interface ChargeSummary {
 
 /* ------- */
 
+/**
+ * Response model for Kamereon Charge API.
+ */
 export type ChargeModeData = DataResponse<Omit<ChargeMode, 'id'>>
 
+/**
+ * Response model for Kamereon Charge API when request header "accept"="application/json".
+ */
 export interface ChargeMode {
   id?: Vin;
   chargeMode?: ChargeModeStatus;
@@ -58,8 +70,14 @@ export type ChargeModeStatus =
 
 /* ------- */
 
+/**
+ * Response model for Kamereon Charge API.
+ */
 export type ChargeScheduleData = DataResponse<ChargeSchedule>
 
+/**
+ * Response model for Kamereon Charge API when request header "accept"="application/json".
+ */
 export interface ChargeSchedule {
   id?: Vin;
   calendar?: Record<Day, Sched[]>;
@@ -74,8 +92,14 @@ interface Sched {
 
 /* ------- */
 
+/**
+ * Response model for Kamereon Charge API.
+ */
 export type ChargesData = DataResponse<Omit<Charges, 'id'>>
 
+/**
+ * Response model for Kamereon Charge API when request header "accept"="application/json".
+ */
 export interface Charges {
   id?: Vin;
   charges?: ChargeDetails[];
@@ -103,8 +127,14 @@ type ChargePowerStatus =
 
 /* ------- */
 
+/**
+ * Response model for Kamereon Charge API.
+ */
 export type ChargingSettingsData = DataResponse<Omit<ChargingSettings, 'id'>>
 
+/**
+ * Response model for Kamereon Charge API when request header "accept"="application/json".
+ */
 export interface ChargingSettings extends Schedules<ChargeDaySchedule> {
   id?: Vin;
   dateTime?: DateType;

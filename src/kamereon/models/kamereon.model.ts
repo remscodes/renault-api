@@ -45,14 +45,13 @@ export type KcmActionEndpoint = Prefix<KcmAction, 'charge/'>
 
 /* ------- */
 
-// Use when Header has not 'Accept'='application/json'
 export interface DataResponse<A, T = 'Car'> {
   data: Data<A, T>;
 }
 
 interface Data<A, T> {
   type?: T;
-  id?: Vin;
+  id?: Vin | AccountId;
   attributes?: A;
 }
 
@@ -93,3 +92,4 @@ export interface Version {
 /* ------- */
 
 export type Vin = string
+export type AccountId = string
