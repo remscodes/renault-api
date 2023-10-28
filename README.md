@@ -37,8 +37,7 @@ url.searchParams.set('apikey', GigyaApi.KEY);
 url.searchParams.set('loginID', 'my-renault-login');
 url.searchParams.set('password', 'my-renault-password');
 
-const response = await fetch(url, { method: 'POST' });
-const result: LoginInfo = await response.json();
+const result: LoginInfo = await fetch(url, { method: 'POST' }).then(r => r.json());
 ```
 
 ```ts
@@ -57,8 +56,7 @@ const headers = {
   accept: 'application/json'
 };
 
-const response = await fetch(url, { method: 'GET', headers });
-const result: BatteryStatus = await response.json();
+const result: BatteryStatus = await fetch(url, { method: 'GET', headers }).then(r => r.json());
 ```
 
 ## Disclaimer
