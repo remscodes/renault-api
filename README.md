@@ -37,7 +37,8 @@ url.searchParams.set('apikey', GigyaApi.KEY);
 url.searchParams.set('loginID', 'my-renault-login');
 url.searchParams.set('password', 'my-renault-password');
 
-const result: LoginInfo = await fetch(url, { method: 'POST' });
+const response = await fetch(url, { method: 'POST' });
+const result: LoginInfo = await response.json();
 ```
 
 ```ts
@@ -53,10 +54,11 @@ url.searchParams.set('country', 'FR');
 const headers = {
   apikey: KamereonApi.KEY,
   'x-gigya-id_token': 'my-token',
-  Accept: 'application/json'
+  accept: 'application/json'
 };
 
-const result: BatteryStatus = await fetch(url, { method: 'GET', headers });
+const response = await fetch(url, { method: 'GET', headers });
+const result: BatteryStatus = await response.json();
 ```
 
 ## Disclaimer
