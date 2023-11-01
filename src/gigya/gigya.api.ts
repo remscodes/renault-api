@@ -73,7 +73,7 @@ export const GigyaApi = {
    * - **apikey** : GigyaApi.KEY
    * - **login_token** : (Gigya token retrieved with login API)
    *
-   * __Response Model__ : TokenPublicKey
+   * __Response Model__ : TokenPublicInfo
    */
   GET_JWT_PUBLIC_KEY_URL,
 

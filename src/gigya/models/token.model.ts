@@ -7,7 +7,7 @@ export interface TokenInfo extends GigyaResponse {
   id_token?: string;
 }
 
-export interface TokenPublicKey extends GigyaResponse {
+export interface TokenPublicInfo extends GigyaResponse {
   alg?: string;
   kid?: string;
   kty?: string;
