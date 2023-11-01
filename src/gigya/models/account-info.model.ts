@@ -5,13 +5,13 @@ import type { GigyaAuthResponse } from './gigya-response.model';
  * Response model of Gigya Account API.
  */
 export interface AccountInfo extends GigyaAuthResponse {
-  data?: Data;
+  data?: AccountData;
   preferences?: Preferences;
   emails?: Emails;
   password?: Password;
 }
 
-interface Data {
+interface AccountData {
   migrationCode?: string;
   gigyaImportJobID?: string;
   personId?: string;

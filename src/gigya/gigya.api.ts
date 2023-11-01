@@ -44,7 +44,7 @@ export const GigyaApi = {
    * - **login_token** : (Gigya token retrieved with login API)
    *
    * __Response Model__ : AccountInfo
-   * (**personId** stored in AccountInfo.Data.personId)
+   * (**personId** stored in AccountInfo.AccountData.personId)
    */
   GET_ACCOUNT_INFO_URL,
 
