@@ -45,6 +45,10 @@ const PERFORM_HVAC_SCHEDULE_URL = (accountId: string, vin: string) => PERFORM_VE
 const PERFORM_HVAC_START_URL = (accountId: string, vin: string) => PERFORM_VEHICLE_KCA_ACTION_URL(accountId, vin, KCA_ACTION_ENDPOINTS['actions/hvac-start'].version, 'actions/hvac-start');
 const PERFORM_PAUSE_RESUME_URL = (accountId: string, vin: string) => PERFORM_VEHICLE_KCM_ACTION_URL(accountId, vin, KCM_ACTION_ENDPOINTS['charge/pause-resume'].version, 'charge/pause-resume');
 
+const PERFORM_REFRESH_BATTERY_STATUS = (accountId: string, vin: string) => PERFORM_VEHICLE_KCA_ACTION_URL(accountId, vin, KCA_ACTION_ENDPOINTS['actions/refresh-battery-status'].version, 'actions/refresh-battery-status');
+const PERFORM_REFRESH_HVAC_STATUS = (accountId: string, vin: string) => PERFORM_VEHICLE_KCA_ACTION_URL(accountId, vin, KCA_ACTION_ENDPOINTS['actions/refresh-hvac-status'].version, 'actions/refresh-hvac-status');
+const PERFORM_REFRESH_LOCATION = (accountId: string, vin: string) => PERFORM_VEHICLE_KCA_ACTION_URL(accountId, vin, KCA_ACTION_ENDPOINTS['actions/refresh-location'].version, 'actions/refresh-location');
+
 /**
  * Kamereon API to interact with the vehicle
  */
@@ -448,7 +452,7 @@ export const KamereonApi = {
    *   data: {
    *      "type": "ChargeMode",
    *      "attributes": {
-   *        "action": **("always_charging" | "always_charging" | "schedule_mode")**
+   *        "action": **("always_charging" | "schedule_mode")**
    *      }
    *   }
    * }
@@ -494,6 +498,8 @@ export const KamereonApi = {
    *   "startTime": **(time format THH:MMZ)**,
    *   "duration": **(minutes as number)**
    * }
+   *
+   * __Response Model__ : ActionChargeSchedule
    */
   PERFORM_CHARGE_SCHEDULE_URL,
 
@@ -623,5 +629,80 @@ export const KamereonApi = {
    *    }
    * }
    */
-  PERFORM_PAUSE_RESUME_URL
+  PERFORM_PAUSE_RESUME_URL,
+
+  /**
+   * __Description__ : Refresh vehicle battery status.
+   *
+   * __Method__ : POST
+   *
+   * __Headers__ :
+   * - **apikey** : KamereonApi.KEY
+   * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
+   * - **accept** : "application/json"
+   * - **content-type** : "application/vnd.api+json"
+   *
+   * __Params__ :
+   * - **country** : "FR"
+   *
+   * __Body__ :
+   * {
+   *    data: {
+   *      "type": "RefreshBatteryStatus"
+   *    }
+   * }
+   *
+   * __Response Model__ : ActionRefreshBatteryStatus
+   */
+  PERFORM_REFRESH_BATTERY_STATUS,
+
+  /**
+   * __Description__ : Refresh vehicle hvac status.
+   *
+   * __Method__ : POST
+   *
+   * __Headers__ :
+   * - **apikey** : KamereonApi.KEY
+   * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
+   * - **accept** : "application/json"
+   * - **content-type** : "application/vnd.api+json"
+   *
+   * __Params__ :
+   * - **country** : "FR"
+   *
+   * __Body__ :
+   * {
+   *    data: {
+   *      "type": "RefreshHvacStatus"
+   *    }
+   * }
+   *
+   * __Response Model__ : ActionRefreshHvacStatus
+   */
+  PERFORM_REFRESH_HVAC_STATUS,
+
+  /**
+   * __Description__ : Refresh vehicle location.
+   *
+   * __Method__ : POST
+   *
+   * __Headers__ :
+   * - **apikey** : KamereonApi.KEY
+   * - **x-gigya-id_token** : (token retrieved with Gigya getJWT API)
+   * - **accept** : "application/json"
+   * - **content-type** : "application/vnd.api+json"
+   *
+   * __Params__ :
+   * - **country** : "FR"
+   *
+   * __Body__ :
+   * {
+   *    data: {
+   *      "type": "RefreshLocation"
+   *    }
+   * }
+   *
+   * __Response Model__ : ActionRefreshLocation
+   */
+  PERFORM_REFRESH_LOCATION
 };
