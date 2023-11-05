@@ -51,7 +51,7 @@ export interface DataResponse<A, T = 'Car'> {
 
 interface Data<A, T> {
   type?: T;
-  id?: Vin | AccountId;
+  id?: Vin | AccountId | string;
   attributes?: A;
 }
 

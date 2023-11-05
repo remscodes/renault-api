@@ -19,7 +19,7 @@ export interface VehicleLocation {
 
 /* ------- */
 
-export type ActionRefreshLocationData = DataResponse<{}, 'RefreshLocation'>
+export type ActionRefreshLocationData = DataResponse<undefined, 'RefreshLocation'>
 
 export interface ActionRefreshLocation {
   id?: string;

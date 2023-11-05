@@ -80,7 +80,7 @@ export type HvacMode =
 
 /* ------- */
 
-export type ActionRefreshHvacStatusData = DataResponse<{}, 'RefreshHvacStatus'>
+export type ActionRefreshHvacStatusData = DataResponse<undefined, 'RefreshHvacStatus'>
 
 export interface ActionRefreshHvacStatus {
   id?: string;
