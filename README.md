@@ -30,19 +30,17 @@ Examples :
 
 ```ts
 import { GigyaApi } from '@remscodes/renault-api';
-import type { LoginInfo } from '@remscodes/renault-api';
 
 const url = new URL(GigyaApi.LOGIN_URL);
 url.searchParams.set('apikey', GigyaApi.KEY);
 url.searchParams.set('loginID', 'my-renault-login');
 url.searchParams.set('password', 'my-renault-password');
 
-const result: LoginInfo = await fetch(url, { method: 'POST' }).then(r => r.json());
+const result = await fetch(url, { method: 'POST' }).then(r => r.json());
 ```
 
 ```ts
 import { KamereonApi } from '@remscodes/renault-api';
-import type { BatteryStatus } from '@remscodes/renault-api';
 
 const accountId = 'a1b2c3d4-xxxxxxxx';
 const vin = 'VF1XXXXXXXXXXX';
@@ -56,7 +54,7 @@ const headers = {
   accept: 'application/json'
 };
 
-const result: BatteryStatus = await fetch(url, { method: 'GET', headers }).then(r => r.json());
+const batteryStatus = await fetch(url, { method: 'GET', headers }).then(r => r.json());
 ```
 
 ## Disclaimer
