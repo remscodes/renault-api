@@ -1,3 +1,15 @@
+# 1.2.0 (2023-11-06)
+
+### Features
+
+- Add Kamereon refresh API.
+
+### Improvements
+
+- Update models.
+
+> Commits : https://github.com/remscodes/renault-api/commits/v1.2.0
+
 # 1.1.0 (2023-10-28)
 
 ### Features
