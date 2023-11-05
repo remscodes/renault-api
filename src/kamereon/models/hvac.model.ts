@@ -85,3 +85,19 @@ export type ActionRefreshHvacStatusData = DataResponse<undefined, 'RefreshHvacSt
 export interface ActionRefreshHvacStatus {
   id?: string;
 }
+
+/* ------- */
+
+export type ActionHvacScheduleData = DataResponse<Omit<ActionHvacSchedule, 'id'>>
+
+export interface ActionHvacSchedule {
+  id?: string;
+}
+
+/* ------- */
+
+export type ActionHvacStartData = DataResponse<Omit<ActionHvacStart, 'id'>>
+
+export interface ActionHvacStart {
+  id?: string;
+}

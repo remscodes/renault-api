@@ -155,3 +155,19 @@ export type ActionChargeScheduleData = DataResponse<Omit<ActionChargeSchedule, '
 export interface ActionChargeSchedule {
   id?: string;
 }
+
+/* ------- */
+
+export type ActionChargingStartData = DataResponse<Omit<ActionChargeMode, 'id'>>
+
+export interface ActionChargingStart {
+  id?: string;
+}
+
+/* ------- */
+
+export type ActionPauseResumeData = DataResponse<Omit<ActionPauseResume, 'id'>>
+
+export interface ActionPauseResume {
+  id?: string;
+}

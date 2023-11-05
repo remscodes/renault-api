@@ -395,7 +395,7 @@ export const KamereonApi = {
    *
    * __Response Model__ : LockStatus
    *
-   * __\/!\\__ Not work for Megane E-Tech __\/!\\__
+   * __\/!\\__ Does not work for Megane E-Tech __\/!\\__
    */
   READ_LOCK_STATUS_URL,
 
@@ -526,6 +526,8 @@ export const KamereonApi = {
    *      }
    *    }
    * }
+   *
+   * __Response Model__ : ActionChargingStart
    */
   PERFORM_CHARGING_START_URL,
 
@@ -563,6 +565,8 @@ export const KamereonApi = {
    * }
    *
    * HvacDaySchedule : { "readyAtTime": **(date)** }
+   *
+   * __Response Model__ : ActionHvacSchedule
    */
   PERFORM_HVAC_SCHEDULE_URL,
 
@@ -602,6 +606,8 @@ export const KamereonApi = {
    *      }
    *   }
    * }
+   *
+   * __Response Model__ : ActionHvacStart
    */
   PERFORM_HVAC_START_URL,
 
@@ -628,6 +634,8 @@ export const KamereonApi = {
    *      }
    *    }
    * }
+   *
+   * __Response Model__ : ActionPauseResume
    */
   PERFORM_PAUSE_RESUME_URL,
 
