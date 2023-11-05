@@ -10,7 +10,7 @@ export type ChargeModeAction =
 // Instant Charging
   | 'always_charging'
   // Delayed Charging
-  | ''
+  // | ''
   // Custom Charging
   | 'schedule_mode'
 
@@ -146,4 +146,12 @@ export interface ChargingSettings extends Schedules<ChargeDaySchedule> {
 export interface ActionChargeMode {
   id?: string;
   action?: ChargeModeAction;
+}
+
+/* ------- */
+
+export type ActionChargeScheduleData = DataResponse<Omit<ActionChargeSchedule, 'id'>>
+
+export interface ActionChargeSchedule {
+  id?: string;
 }
