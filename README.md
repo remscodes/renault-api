@@ -36,7 +36,7 @@ url.searchParams.set('apikey', GigyaApi.KEY);
 url.searchParams.set('loginID', 'my-renault-login');
 url.searchParams.set('password', 'my-renault-password');
 
-const result = await fetch(url, { method: 'POST' }).then(r => r.json());
+const loginInfo = await fetch(url, { method: 'POST' }).then(r => r.json());
 ```
 
 ```ts
