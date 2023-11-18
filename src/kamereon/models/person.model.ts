@@ -37,7 +37,7 @@ export interface Person {
   trackingId?: string;
 }
 
-interface Idp {
+export interface Idp {
   idpId?: string;
   idpType?: string;
   idpStatus?: string;
@@ -49,7 +49,7 @@ interface Idp {
   termsConditionLastModificationDate?: DateType;
 }
 
-interface PreferredDealer {
+export interface PreferredDealer {
   brand?: string;
   dealerId?: string;
   dealerName?: string;
@@ -59,7 +59,7 @@ interface PreferredDealer {
   functionalModificationDate?: DateType;
 }
 
-interface Account {
+export interface Account {
   accountId?: string;
   accountType?: string;
   accountStatus?: string;
@@ -69,7 +69,7 @@ interface Account {
   externalId?: string;
 }
 
-interface Address {
+export interface Address {
   addressType?: string;
   addressLine1?: string;
   addressLine2?: string;
@@ -85,7 +85,7 @@ interface Address {
   functionalModificationDate?: DateType;
 }
 
-interface Agreement {
+export interface Agreement {
   agreementType?: string;
   agreementValue?: boolean;
   createdDate?: null;
@@ -93,7 +93,7 @@ interface Agreement {
   functionalModificationDate?: DateType;
 }
 
-interface Email {
+export interface Email {
   emailType?: string;
   emailValue?: string;
   validityFlag?: boolean;
@@ -103,7 +103,7 @@ interface Email {
   functionalModificationDate?: DateType;
 }
 
-interface Phone {
+export interface Phone {
   phoneType?: string;
   phoneValue?: string;
   areaCode?: string;
@@ -113,7 +113,7 @@ interface Phone {
   functionalModificationDate?: DateType;
 }
 
-interface Purpose {
+export interface Purpose {
   purposeId?: string;
   country?: string;
   purposeType?: string;
@@ -125,7 +125,7 @@ interface Purpose {
   lastModifiedDate?: DateType;
 }
 
-interface Consent {
+export interface Consent {
   consentId?: string;
   scopeType?: string;
   agreements?: ConsentAgreement[];
@@ -133,7 +133,7 @@ interface Consent {
   lastModifiedDate?: DateType;
 }
 
-interface ConsentAgreement {
+export interface ConsentAgreement {
   type?: string;
   value?: string;
   displayValue?: string;
@@ -145,7 +145,7 @@ interface ConsentAgreement {
   functionalModificationDate?: DateType;
 }
 
-interface StopCommunication {
+export interface StopCommunication {
   stopCommunicationType?: string;
   stopCommunicationValue?: boolean;
   createdDate?: DateType;

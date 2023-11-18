@@ -1,4 +1,5 @@
 import type { DateType } from '../../shared.model';
+import type { PreferredDealer } from './person.model';
 
 /**
  * Response model for Kamereon Account API.
@@ -25,16 +26,8 @@ export interface VehicleLink {
   vehicleDetails?: VehicleDetails;
 }
 
-interface ConnectedDriver {
+export interface ConnectedDriver {
   role?: string;
-  createdDate?: DateType;
-  lastModifiedDate?: DateType;
-}
-
-interface PreferredDealer {
-  dealerId?: string;
-  dealerName?: string;
-  brand?: string;
   createdDate?: DateType;
   lastModifiedDate?: DateType;
 }
@@ -72,40 +65,40 @@ export interface VehicleDetails {
   radioCode?: string;
 }
 
-interface Asset {
+export interface Asset {
   assetType?: string;
   viewpoint?: ImageViewpointType;
   renditions?: Rendition[];
 }
 
-type ImageViewpointType =
+export type ImageViewpointType =
   | 'mybrand_2'
   | 'mybrand_5'
 
-interface Rendition {
+export interface Rendition {
   resolutionType?: ImageResolutionType;
   url?: string;
 }
 
-type ImageResolutionType =
+export type ImageResolutionType =
   | 'ONE_MYRENAULT_LARGE'
   | 'ONE_MYRENAULT_SMALL'
 
-interface Tag {
+export interface Tag {
   code?: string;
   label?: string;
   group?: string;
 }
 
-interface Brand {
+export interface Brand {
   label?: string;
 }
 
-interface DeliveryCountry {
+export interface DeliveryCountry {
   code?: string;
   label?: string;
 }
 
-interface RegistrationCountry {
+export interface RegistrationCountry {
   code?: string;
 }

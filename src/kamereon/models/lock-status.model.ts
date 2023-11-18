@@ -11,15 +11,15 @@ export type LockStatusData = DataResponse<Omit<LockStatus, 'id'>>
  */
 export interface LockStatus {
   id?: Vin;
-  doorStatusFrontLeft?: Lock;
-  doorStatusFrontRight?: Lock;
-  doorStatusRearLeft?: Lock;
-  doorStatusRearRight?: Lock;
-  hatchStatus?: Lock;
+  doorStatusFrontLeft?: LockType;
+  doorStatusFrontRight?: LockType;
+  doorStatusRearLeft?: LockType;
+  doorStatusRearRight?: LockType;
+  hatchStatus?: LockType;
   lastUpdateTime?: DateType;
-  lockStatus?: Lock;
+  lockStatus?: LockType;
 }
 
-type Lock =
+export type LockType =
   | 'locked'
   | 'unlocked'

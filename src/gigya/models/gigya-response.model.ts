@@ -47,7 +47,7 @@ export interface GigyaAuthResponse extends GigyaResponse {
   verifiedTimestamp?: number;
 }
 
-interface Profile {
+export interface Profile {
   firstName?: string;
   lastName?: string;
   country?: string;

@@ -6,12 +6,12 @@ import type { GigyaAuthResponse } from './gigya-response.model';
  */
 export interface AccountInfo extends GigyaAuthResponse {
   data?: AccountData;
-  preferences?: Preferences;
-  emails?: Emails;
-  password?: Password;
+  preferences?: AccountPreferences;
+  emails?: AccountEmails;
+  password?: AccountPassword;
 }
 
-interface AccountData {
+export interface AccountData {
   migrationCode?: string;
   gigyaImportJobID?: string;
   personId?: string;
@@ -19,14 +19,13 @@ interface AccountData {
   migrationExternalId?: string;
 }
 
-interface Emails {
+export interface AccountEmails {
   verified?: string[];
   unverified?: any[];
 }
 
-interface Password {
+export interface AccountPassword {
   created?: DateType;
 }
 
-interface Preferences {
-}
+export interface AccountPreferences {}

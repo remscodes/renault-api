@@ -80,8 +80,10 @@ export type ChargeScheduleData = DataResponse<ChargeSchedule>
  */
 export interface ChargeSchedule {
   id?: Vin;
-  calendar?: Record<Day, Sched[]>;
+  calendar?: Calendar;
 }
+
+export type Calendar = Record<Day, Sched[]>
 
 interface Sched {
   // Format HHMM
