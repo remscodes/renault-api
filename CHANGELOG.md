@@ -1,3 +1,11 @@
+# 1.2.2 (2023-11-19)
+
+### Fixes
+
+- Fix enums export.
+
+> Commits : https://github.com/remscodes/renault-api/commits/v1.2.2
+
 # 1.2.1 (2023-11-18)
 
 ### Fixes
