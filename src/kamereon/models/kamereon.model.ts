@@ -93,3 +93,7 @@ export interface Version {
 
 export type Vin = string
 export type AccountId = string
+
+export type ImageOrientation =
+  | 'iso'
+  | 'profile'

@@ -3,7 +3,7 @@ export interface SendNavigationInputs {
   destinations: Destination[];
 }
 
-interface Destination {
+export interface Destination {
   id: number;
   latitude: number;
   longitude: number;

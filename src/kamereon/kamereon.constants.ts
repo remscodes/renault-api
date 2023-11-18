@@ -1,4 +1,4 @@
-import type { Action, KcaActionEndpoint, KcmActionEndpoint, Period, ReadEndpoint, Version } from './models';
+import type { Action, ImageOrientation, KcaActionEndpoint, KcmActionEndpoint, Period, ReadEndpoint, Version } from './models';
 
 export const KCA_READ_ENDPOINTS = {
   '': { version: 2 },
@@ -46,8 +46,4 @@ export const PERIOD_TZ_FORMAT = 'YYYY-MM-DDTHH:mm:ssZ' as const satisfies string
 export const IMAGE_ORIENTATION_KEY = {
   iso: 'mybrand_2',
   profile: 'mybrand_5'
-} as const satisfies Record<Orientation, string>;
-
-type Orientation =
-  | 'iso'
-  | 'profile'
+} as const satisfies Record<ImageOrientation, string>;
