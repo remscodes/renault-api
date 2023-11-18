@@ -1,3 +1,11 @@
+# 1.2.1 (2023-11-18)
+
+### Fixes
+
+- Export missing models.
+
+> Commits : https://github.com/remscodes/renault-api/commits/v1.2.1
+
 # 1.2.0 (2023-11-06)
 
 ### Features
