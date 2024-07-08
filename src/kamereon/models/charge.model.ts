@@ -7,7 +7,7 @@ export interface ChargeModeInputs {
 }
 
 export type ChargeModeAction =
-// Instant Charging
+  // Instant Charging
   | 'always_charging'
   // Delayed Charging
   // | ''
@@ -140,7 +140,7 @@ export type ChargingSettingsData = DataResponse<Omit<ChargingSettings, 'id'>>
 export interface ChargingSettings extends Schedules<ChargeDaySchedule> {
   id?: Vin;
   dateTime?: DateType;
-  mode?: ChargeModeAction;
+  mode?: ChargeModeStatus;
 }
 
 /* ------- */
