@@ -53,6 +53,7 @@ export interface VehicleDetails {
   energy?: Tag;
   registrationNumber?: string;
   vcd?: string;
+  manufacturingDate?: string;
   assets?: Asset[];
   yearsOfMaintenance?: number;
   connectivityTechnology?: string;
