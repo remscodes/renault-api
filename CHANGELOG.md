@@ -1,3 +1,12 @@
+# 1.2.4 (2025-01-30)
+
+### Update
+
+- Update VehicleDetails model.
+- Update dependencies.
+
+> Commits : https://github.com/remscodes/renault-api/commits/v1.2.4
+
 # 1.2.3 (2024-07-09)
 
 ### Update
