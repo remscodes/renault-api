@@ -41,7 +41,7 @@ export const GigyaApi = {
    *
    * __Params__:
    * - `apikey`: GigyaApi.KEY
-   * - `login_token`: <token> (Login API)
+   * - `login_token`: <token> (from Login API)
    *
    * __Response Model__: AccountInfo
    * (`personId` stored in AccountInfo.data.personId)

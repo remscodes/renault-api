@@ -70,7 +70,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: Person
    * @see Person
@@ -87,7 +87,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: Vehicles
    * @see Vehicles
@@ -104,8 +104,8 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
-   * - `local`: "fr_FR"
+   * - `country`: <country code> (ex. "FR")
+   * - `local`: <locale code> (ex. "fr_FR")
    * - `brand`: "RENAULT"
    * - `connectedServicesContracts`: "true"
    * - `warranty`: "true"
@@ -126,7 +126,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: VehicleDetails
    * @see VehicleDetails
@@ -143,7 +143,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - **country**: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: AdapterInfo
    * @see AdapterInfo
@@ -161,7 +161,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: BatteryStatus
    * @see BatteryStatus
@@ -178,7 +178,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: BatteryStatus
    * @see BatteryStatus
@@ -195,7 +195,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    * - `type`: "day" | "month"
    * - `start`: <date> (format YYYYMMDD)
    * - `end`: <date> (format YYYYMMDD)
@@ -215,7 +215,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: ChargeMode
    * @see ChargeMode
@@ -232,7 +232,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: ChargeSchedule
    * @see ChargeSchedule
@@ -248,7 +248,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    * - `start`: <date> (format YYYYMMDD)
    * - `end`: <date> (format YYYYMMDD)
    *
@@ -267,7 +267,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: ChargingSettings
    * @see ChargingSettings
@@ -284,7 +284,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__ : Cockpit
    * @see Cockpit
@@ -301,7 +301,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    * - `type`: "day" | "month"
    * - `start`: <date> (format YYYYMMDD)
    * - `end`: <date> (format YYYYMMDD)
@@ -321,7 +321,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__ :
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    * - `start`: <date> (format YYYYMMDD)
    * - `end`: <date> (format YYYYMMDD)
    *
@@ -340,7 +340,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: HvacStatus
    * @see HvacStatus
@@ -357,7 +357,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: HvacSettings
    * @see HvacSettings
@@ -374,7 +374,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: VehicleLocation
    * @see VehicleLocation
@@ -391,7 +391,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: LockStatus
    * @see LockStatus
@@ -408,7 +408,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: NotificationSettings
    * @see NotificationSettings
@@ -425,7 +425,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: ResState
    * @see ResState
@@ -442,7 +442,7 @@ export const KamereonApi = {
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Response Model__: Pressure
    * @see Pressure
@@ -460,7 +460,7 @@ export const KamereonApi = {
    * - `content-type`: "application/vnd.api+json"
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Body__ :
    * {
@@ -488,7 +488,7 @@ export const KamereonApi = {
    * - `content-type`: "application/vnd.api+json"
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Body__ :
    * {
@@ -530,7 +530,7 @@ export const KamereonApi = {
    * - `content-type`: "application/vnd.api+json"
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Body__ :
    * {
@@ -558,7 +558,7 @@ export const KamereonApi = {
    * - `content-type`: "application/vnd.api+json"
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Body__ :
    * {
@@ -597,7 +597,7 @@ export const KamereonApi = {
    * - `content-type`: "application/vnd.api+json"
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Body__ :
    * {
@@ -638,7 +638,7 @@ export const KamereonApi = {
    * - `content-type`: "application/vnd.api+json"
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Body__ :
    * {
@@ -666,7 +666,7 @@ export const KamereonApi = {
    * - `content-type`: "application/vnd.api+json"
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Body__ :
    * {
@@ -691,7 +691,7 @@ export const KamereonApi = {
    * - `content-type`: "application/vnd.api+json"
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Body__ :
    * {
@@ -716,7 +716,7 @@ export const KamereonApi = {
    * - `content-type`: "application/vnd.api+json"
    *
    * __Params__:
-   * - `country`: "FR"
+   * - `country`: <country code> (ex. "FR")
    *
    * __Body__ :
    * {
