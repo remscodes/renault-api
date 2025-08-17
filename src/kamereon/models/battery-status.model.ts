@@ -29,5 +29,5 @@ export interface BatteryStatus {
 export type ActionRefreshBatteryStatusData = DataResponse<undefined, 'RefreshBatteryStatus'>
 
 export interface ActionRefreshBatteryStatus {
-  id?: string;
+  id: string;
 }
