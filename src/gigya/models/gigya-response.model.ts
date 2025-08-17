@@ -1,4 +1,4 @@
-import type { DateType } from '../../shared.model';
+import type { DateISO } from '../../shared.model';
 
 /**
  * Common response model of Gigya API.
@@ -9,7 +9,7 @@ export interface GigyaResponse {
   apiVersion: number;
   statusCode: number;
   statusReason: string;
-  time: DateType;
+  time: DateISO;
 }
 
 /**
@@ -28,22 +28,22 @@ export interface GigyaAuthResponse extends GigyaResponse {
   UID: string;
   UIDSignature: string;
   signatureTimestamp: number;
-  created: DateType;
+  created: DateISO;
   createdTimestamp: number;
   isActive: boolean;
   isRegistered: boolean;
   isVerified: boolean;
-  lastLogin: DateType;
+  lastLogin: DateISO;
   lastLoginTimestamp: number;
-  lastUpdated: DateType;
+  lastUpdated: DateISO;
   lastUpdatedTimestamp: number;
   loginProvider: string;
-  oldestDataUpdated: DateType;
+  oldestDataUpdated: DateISO;
   oldestDataUpdatedTimestamp: number;
   profile: Profile;
-  registered: DateType;
+  registered: DateISO;
   socialProviders: string;
-  verified: DateType;
+  verified: DateISO;
   verifiedTimestamp: number;
 }
 

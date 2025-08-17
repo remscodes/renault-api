@@ -9,7 +9,7 @@ export type ResStateData = DataResponse<ResState>
  * Response model for Kamereon ResState API when request header "accept"="application/json".
  */
 export interface ResState {
-  id?: Vin;
-  details?: string,
-  code?: string;
+  id: Vin;
+  details: string,
+  code: string;
 }

@@ -17,7 +17,7 @@ export const KCA_READ_ENDPOINTS = {
   'location': { version: 1 },
   'lock-status': { version: 1 },
   'notification-settings': { version: 1 },
-  'res-state': { version: 1 }
+  'res-state': { version: 1 },
 } as const satisfies Record<ReadEndpoint, Version>;
 
 export const KCA_ACTION_ENDPOINTS = {
@@ -29,21 +29,21 @@ export const KCA_ACTION_ENDPOINTS = {
   'actions/refresh-battery-status': { version: 1, type: 'RefreshBatteryStatus' },
   'actions/refresh-hvac-status': { version: 1, type: 'RefreshHvacStatus' },
   'actions/refresh-location': { version: 1, type: 'RefreshLocation' },
-  'actions/send-navigation': { version: 1, type: 'SendNavigation' }
+  'actions/send-navigation': { version: 1, type: 'SendNavigation' },
 } as const satisfies Record<KcaActionEndpoint, Action>;
 
 export const KCM_ACTION_ENDPOINTS = {
-  'charge/pause-resume': { version: 1, type: 'ChargePauseResume' }
+  'charge/pause-resume': { version: 1, type: 'ChargePauseResume' },
 } as const satisfies Record<KcmActionEndpoint, Action>;
 
 export const PERIOD_FORMATS = {
   day: 'YYYYMMDD',
-  month: 'YYYYMM'
+  month: 'YYYYMM',
 } as const satisfies Record<Period, string>;
 
-export const PERIOD_TZ_FORMAT = 'YYYY-MM-DDTHH:mm:ssZ' as const satisfies string;
+export const PERIOD_TZ_FORMAT = 'YYYY-MM-DDTHH:mm:ssZ' as const;
 
 export const IMAGE_ORIENTATION_KEY = {
   iso: 'mybrand_2',
-  profile: 'mybrand_5'
+  profile: 'mybrand_5',
 } as const satisfies Record<ImageOrientation, string>;

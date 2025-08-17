@@ -1,4 +1,4 @@
-import type { DateType } from '../../shared.model';
+import type { DateISO } from '../../shared.model';
 import type { GigyaAuthResponse } from './gigya-response.model';
 
 /**
@@ -27,5 +27,5 @@ export interface AccountEmails {
 }
 
 export interface AccountPassword {
-  created: DateType;
+  created: DateISO;
 }

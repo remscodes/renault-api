@@ -1,4 +1,4 @@
-import type { DateType } from '../../shared.model';
+import type { DateISO } from '../../shared.model';
 import type { DataResponse, Vin } from './kamereon.model';
 
 /**
@@ -10,11 +10,11 @@ export type VehicleLocationData = DataResponse<Omit<VehicleLocation, 'id'>>
  * Response model for Kamereon Location API when request header "accept"="application/json".
  */
 export interface VehicleLocation {
-  id?: Vin;
-  gpsDirection?: null;
-  gpsLatitude?: number;
-  gpsLongitude?: number;
-  lastUpdateTime?: DateType;
+  id: Vin;
+  gpsDirection: null;
+  gpsLatitude: number;
+  gpsLongitude: number;
+  lastUpdateTime: DateISO;
 }
 
 /* ------- */

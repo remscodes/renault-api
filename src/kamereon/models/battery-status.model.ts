@@ -1,4 +1,4 @@
-import type { DateType } from '../../shared.model';
+import type { DateISO } from '../../shared.model';
 import type { PlugStatus } from './battery-status-enum.model';
 import type { DataResponse, Vin } from './kamereon.model';
 
@@ -12,7 +12,7 @@ export type BatteryStatusData = DataResponse<Omit<BatteryStatus, 'id'>>;
  */
 export interface BatteryStatus {
   id?: Vin;
-  timestamp: DateType;
+  timestamp: DateISO;
   batteryLevel: number;
   batteryAutonomy: number;
   batteryTemperature: number;

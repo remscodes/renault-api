@@ -1,9 +1,9 @@
-import type { DateType } from '../../shared.model';
+import type { DateISO } from '../../shared.model';
 
 export interface DateFilter {
   period: Period;
-  start: DateType;
-  end: DateType;
+  start: DateISO;
+  end: DateISO;
 }
 
 export type Period =

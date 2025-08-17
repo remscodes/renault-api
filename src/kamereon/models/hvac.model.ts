@@ -1,10 +1,10 @@
-import type { DateType } from '../../shared.model';
+import type { DateISO } from '../../shared.model';
 import type { DataResponse, Vin } from './kamereon.model';
 import type { Schedules } from './schedule.model';
 
 export interface HvacStartInputs {
   targetTemperature: number;
-  startDateTime?: DateType;
+  startDateTime?: DateISO;
 }
 
 /* ------- */
@@ -12,7 +12,7 @@ export interface HvacStartInputs {
 export type HvacScheduleInputs = Schedules<HvacDaySchedule>
 
 export interface HvacDaySchedule {
-  readyAtTime: DateType;
+  readyAtTime: DateISO;
 }
 
 /* ------- */
@@ -48,10 +48,10 @@ export type HvacStatusData = DataResponse<HvacStatus>
  * Response model for Kamereon HVAC API when request header "accept"="application/json".
  */
 export interface HvacStatus {
-  id?: Vin;
-  socThreshold?: number;
-  hvacStatus?: HvacStatusType;
-  lastUpdateTime?: DateType;
+  id: Vin;
+  socThreshold: number;
+  hvacStatus: HvacStatusType;
+  lastUpdateTime: DateISO;
 }
 
 export type HvacStatusType =
@@ -69,10 +69,10 @@ export type HvacSettingsData = DataResponse<Omit<HvacSettings, 'id'>>
  * Response model for Kamereon HVAC API when request header "accept"="application/json".
  */
 export interface HvacSettings extends Schedules<HvacDaySchedule, { targetTemperature?: number }> {
-  id?: Vin;
-  dateTime?: DateType;
-  mode?: HvacMode;
-  globalTargetTemperature?: number;
+  id: Vin;
+  dateTime: DateISO;
+  mode: HvacMode;
+  globalTargetTemperature: number;
 }
 
 export type HvacMode =
@@ -83,7 +83,7 @@ export type HvacMode =
 export type ActionRefreshHvacStatusData = DataResponse<undefined, 'RefreshHvacStatus'>
 
 export interface ActionRefreshHvacStatus {
-  id?: string;
+  id: string;
 }
 
 /* ------- */
@@ -91,7 +91,7 @@ export interface ActionRefreshHvacStatus {
 export type ActionHvacScheduleData = DataResponse<Omit<ActionHvacSchedule, 'id'>>
 
 export interface ActionHvacSchedule {
-  id?: string;
+  id: string;
 }
 
 /* ------- */
@@ -99,5 +99,5 @@ export interface ActionHvacSchedule {
 export type ActionHvacStartData = DataResponse<Omit<ActionHvacStart, 'id'>>
 
 export interface ActionHvacStart {
-  id?: string;
+  id: string;
 }

@@ -1,4 +1,4 @@
-import type { DateType, Day } from '../../shared.model';
+import type { DateHH_MM, DateISO, Day } from '../../shared.model';
 import type { DataResponse, Vin } from './kamereon.model';
 import type { Schedules } from './schedule.model';
 
@@ -59,8 +59,8 @@ export type ChargeModeData = DataResponse<Omit<ChargeMode, 'id'>>
  * Response model for Kamereon Charge API when request header "accept"="application/json".
  */
 export interface ChargeMode {
-  id?: Vin;
-  chargeMode?: ChargeModeStatus;
+  id: Vin;
+  chargeMode: ChargeModeStatus;
 }
 
 export type ChargeModeStatus =
@@ -79,17 +79,16 @@ export type ChargeScheduleData = DataResponse<ChargeSchedule>
  * Response model for Kamereon Charge API when request header "accept"="application/json".
  */
 export interface ChargeSchedule {
-  id?: Vin;
-  calendar?: Calendar;
+  id: Vin;
+  calendar: Calendar;
 }
 
 export type Calendar = Record<Day, Sched[]>
 
 interface Sched {
-  // Format HHMM
-  startTime?: string;
-  duration?: number;
-  activationState?: boolean;
+  startTime: DateHH_MM;
+  duration: number;
+  activationState: boolean;
 }
 
 /* ------- */
@@ -103,22 +102,22 @@ export type ChargesData = DataResponse<Omit<Charges, 'id'>>
  * Response model for Kamereon Charge API when request header "accept"="application/json".
  */
 export interface Charges {
-  id?: Vin;
-  charges?: ChargeDetails[];
+  id: Vin;
+  charges: ChargeDetails[];
 }
 
 export interface ChargeDetails {
-  chargeStartDate?: DateType,
-  chargeEndDate?: DateType,
-  chargeDuration?: number,
-  chargeStartBatteryLevel?: number,
-  chargeEndBatteryLevel?: number,
-  chargeEnergyRecovered?: number;
-  chargeEndStatus?: ChargeEndStatus
+  chargeStartDate: DateISO,
+  chargeEndDate: DateISO,
+  chargeDuration: number,
+  chargeStartBatteryLevel: number,
+  chargeEndBatteryLevel: number,
+  chargeEnergyRecovered: number;
+  chargeEndStatus: ChargeEndStatus
 
-  chargeBatteryLevelRecovered?: number,
-  chargePower?: ChargePowerStatus,
-  chargeStartInstantaneousPower?: number,
+  chargeBatteryLevelRecovered: number,
+  chargePower: ChargePowerStatus,
+  chargeStartInstantaneousPower: number,
 }
 
 type ChargeEndStatus =
@@ -138,16 +137,16 @@ export type ChargingSettingsData = DataResponse<Omit<ChargingSettings, 'id'>>
  * Response model for Kamereon Charge API when request header "accept"="application/json".
  */
 export interface ChargingSettings extends Schedules<ChargeDaySchedule> {
-  id?: Vin;
-  dateTime?: DateType;
-  mode?: ChargeModeStatus;
+  id: Vin;
+  dateTime: DateISO;
+  mode: ChargeModeStatus;
 }
 
 /* ------- */
 
 export interface ActionChargeMode {
-  id?: string;
-  action?: ChargeModeAction;
+  id: string;
+  action: ChargeModeAction;
 }
 
 /* ------- */
@@ -155,7 +154,7 @@ export interface ActionChargeMode {
 export type ActionChargeScheduleData = DataResponse<Omit<ActionChargeSchedule, 'id'>>
 
 export interface ActionChargeSchedule {
-  id?: string;
+  id: string;
 }
 
 /* ------- */
@@ -163,7 +162,7 @@ export interface ActionChargeSchedule {
 export type ActionChargingStartData = DataResponse<Omit<ActionChargeMode, 'id'>>
 
 export interface ActionChargingStart {
-  id?: string;
+  id: string;
 }
 
 /* ------- */
@@ -171,5 +170,5 @@ export interface ActionChargingStart {
 export type ActionPauseResumeData = DataResponse<Omit<ActionPauseResume, 'id'>>
 
 export interface ActionPauseResume {
-  id?: string;
+  id: string;
 }
