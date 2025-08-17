@@ -1,13 +1,13 @@
-const GIGYA_URL = 'https://accounts.eu1.gigya.com' as const satisfies string;
-const GIGYA_API_KEY = '3_4LKbCcMMcvjDm3X89LU4z4mNKYKdl_W0oD9w-Jvih21WqgJKtFZAnb9YdUgWT9_a' as const satisfies string;
+const GIGYA_URL = 'https://accounts.eu1.gigya.com' as const;
+const GIGYA_API_KEY = '3_4LKbCcMMcvjDm3X89LU4z4mNKYKdl_W0oD9w-Jvih21WqgJKtFZAnb9YdUgWT9_a' as const;
 
-const ACCOUNTS_URL = `${GIGYA_URL}/accounts` as const satisfies string;
+const ACCOUNTS_URL = `${GIGYA_URL}/accounts` as const;
 
-const LOGIN_URL = `${ACCOUNTS_URL}.login` as const satisfies string;
-const GET_ACCOUNT_INFO_URL = `${ACCOUNTS_URL}.getAccountInfo` as const satisfies string;
-const GET_JWT_URL = `${ACCOUNTS_URL}.getJWT` as const satisfies string;
-const GET_JWT_PUBLIC_KEY_URL = `${ACCOUNTS_URL}.getJWTPublicKey` as const satisfies string;
-const LOGOUT_URL = `${ACCOUNTS_URL}.logout` as const satisfies string;
+const LOGIN_URL = `${ACCOUNTS_URL}.login` as const;
+const GET_ACCOUNT_INFO_URL = `${ACCOUNTS_URL}.getAccountInfo` as const;
+const GET_JWT_URL = `${ACCOUNTS_URL}.getJWT` as const;
+const GET_JWT_PUBLIC_KEY_URL = `${ACCOUNTS_URL}.getJWTPublicKey` as const;
+const LOGOUT_URL = `${ACCOUNTS_URL}.logout` as const;
 
 /**
  * Gigya API for authentication
@@ -16,77 +16,80 @@ export const GigyaApi = {
   /**
    * Gigya API KEY.
    *
-   * For every request, put it as value for the param "apikey".
+   * For every request, put it as a value for the param set "apikey".
    */
   KEY: GIGYA_API_KEY,
   /**
-   * __Description__ : Login to Gigya service. Required to retrieve **login_token**.
+   * __Description__: Login to Gigya service. Required to retrieve `login_token` (from LoginInfo.sessionInfo.cookieValue).
    *
-   * __Method__ : POST
+   * __Method__: POST
    *
-   * __Params__ :
-   * - **apikey** : GigyaApi.KEY
-   * - **loginID** : (user login)
-   * - **password** : (user password)
+   * __Params__:
+   * - `apikey`: GigyaApi.KEY
+   * - `loginID`: <login>
+   * - `password`: <password>
    *
-   * __Response Model__ : LoginInfo
-   * (**login_token** stored in LoginInfo.SessionInfo.cookieValue)
+   * __Response Model__: LoginInfo
+   * @see LoginInfo
    */
   LOGIN_URL,
 
   /**
-   * __Description__ : Get account info. Required to retrieve **personId**.
+   * __Description__: Get account info. Required to retrieve `personId`.
    *
-   * __Method__ : POST
+   * __Method__: POST
    *
-   * __Params__ :
-   * - **apikey** : GigyaApi.KEY
-   * - **login_token** : (Gigya token retrieved with login API)
+   * __Params__:
+   * - `apikey`: GigyaApi.KEY
+   * - `login_token`: <token> (Login API)
    *
-   * __Response Model__ : AccountInfo
-   * (**personId** stored in AccountInfo.AccountData.personId)
+   * __Response Model__: AccountInfo
+   * (`personId` stored in AccountInfo.data.personId)
+   * @see AccountInfo
    */
   GET_ACCOUNT_INFO_URL,
 
   /**
-   * __Description__ : Get JWT. Required to retrieve **id_token** to use Kamereon API.
+   * __Description__: Get JWT. Required to retrieve `id_token` to use Kamereon API.
    *
-   * __Method__ : POST
+   * __Method__: POST
    *
-   * __Params__ :
-   * - **apikey** : GigyaApi.KEY
-   * - **login_token** : (Gigya token retrieved with login API)
-   * - **fields** : "data.personId,data.gigyaDataCenter"
-   * - **expiration** : (expiration of JWT in millisecond)
+   * __Params__:
+   * - `apikey`: GigyaApi.KEY
+   * - `login_token`: <token> (from Login API)
+   * - `fields`: "data.personId,data.gigyaDataCenter"
+   * - `expiration`: <ms> (expiration of the JWT)
    *
-   * __Response Model__ : TokenInfo
-   * (**id_token** stored in TokenInfo.id_token)
+   * __Response Model__: TokenInfo
+   * @see TokenInfo
    */
   GET_JWT_URL,
 
   /**
-   * __Description__ : Get public info about JWT key.
+   * __Description__: Get the public key to validate the Gigya JWT.
    *
-   * __Method__ : POST
+   * __Method__: POST
    *
-   * __Params__ :
-   * - **apikey** : GigyaApi.KEY
-   * - **login_token** : (Gigya token retrieved with login API)
+   * __Params__:
+   * - `apikey`: GigyaApi.KEY
+   * - `login_token`: <token> (from Login API)
    *
-   * __Response Model__ : TokenPublicInfo
+   * __Response Model__: TokenPublicInfo
+   * @see TokenPublicInfo
    */
   GET_JWT_PUBLIC_KEY_URL,
 
   /**
-   * __Description__ : Logout from Gigya service.
+   * __Description__: Logout from Gigya service.
    *
-   * __Method__ : POST
+   * __Method__: POST
    *
-   * __Params__ :
-   * - **apikey** : GigyaApi.KEY
-   * - **login_token** : (Gigya token retrieved with login API)
+   * __Params__:
+   * - `apikey`: GigyaApi.KEY
+   * - `login_token`: <token> (from Login API)
    *
-   * __Response Model__ : LogoutInfo
+   * __Response Model__: LogoutInfo
+   * @see LogoutInfo
    */
-  LOGOUT_URL
+  LOGOUT_URL,
 };
