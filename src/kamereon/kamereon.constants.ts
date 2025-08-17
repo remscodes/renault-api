@@ -18,6 +18,7 @@ export const KCA_READ_ENDPOINTS = {
   'lock-status': { version: 1 },
   'notification-settings': { version: 1 },
   'res-state': { version: 1 },
+  'pressure': { version: 1 },
 } as const satisfies Record<ReadEndpoint, Version>;
 
 export const KCA_ACTION_ENDPOINTS = {

@@ -18,6 +18,7 @@ type KcaEndpoint =
   | 'lock-status'
   | 'notification-settings'
   | 'res-state'
+  | 'pressure'
 
 export type ReadEndpoint = KcaEndpoint;
 

@@ -34,6 +34,7 @@ const READ_LOCATION_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_D
 const READ_LOCK_STATUS_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['lock-status'].version, 'lock-status');
 const READ_NOTIFICATION_SETTINGS_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['notification-settings'].version, 'notification-settings');
 const READ_RES_STATE_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['res-state'].version, 'res-state');
+const READ_PRESSURE_URL = (accountId: string, vin: string) => READ_VEHICLE_KCA_DATA_URL(accountId, vin, KCA_READ_ENDPOINTS['pressure'].version, 'pressure');
 
 const PERFORM_VEHICLE_KCA_ACTION_URL = <V extends Version['version'], E extends ActionEndpoint>(accountId: string, vin: string, version: V, endpoint: E) => `${CAR_KCA_ADAPTER_URL<V>(accountId, vin, version)}/${endpoint}` as const;
 const PERFORM_VEHICLE_KCM_ACTION_URL = <V extends Version['version'], E extends ActionEndpoint>(accountId: string, vin: string, version: V, endpoint: E) => `${CAR_KCM_ADAPTER_URL<V>(accountId, vin, version)}/${endpoint}` as const;
@@ -430,6 +431,23 @@ export const KamereonApi = {
    * @see ResState
    */
   READ_RES_STATE_URL,
+
+  /**
+   * __Description__: Get vehicle pressure.
+   *
+   * __Method__: GET
+   *
+   * __Headers__:
+   * - `apikey`: KamereonApi.KEY
+   * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
+   *
+   * __Params__:
+   * - `country`: "FR"
+   *
+   * __Response Model__: Pressure
+   * @see Pressure
+   */
+  READ_PRESSURE_URL,
 
   /**
    * __Description__: Change vehicle charge mode.

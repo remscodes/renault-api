@@ -14,3 +14,4 @@ export type * from './res-state.model';
 export type * from './schedule.model';
 export type * from './vehicle.model';
 export type * from './vehicle-contract.model';
+export type * from './pressure.model';
