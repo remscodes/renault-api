@@ -1,6 +1,6 @@
 <div align="center">
     <h1>Renault API</h1>
-    <p>Resources url and models to use the API</p>
+    <p>Resources url and models to use the Renault API</p>
 </div> 
 
 <div align="center">
