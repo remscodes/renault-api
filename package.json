@@ -50,7 +50,8 @@
   "keywords": [
     "renault",
     "api",
-    "models"
+    "models",
+    "docs"
   ],
   "packageManager": "pnpm@9.15.4"
 }
