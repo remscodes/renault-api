@@ -145,9 +145,9 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: AdapterInfo
+   * __Response Model__: AdapterInfoResponse
+   * @see AdapterInfoResponse
    * @see AdapterInfo
-   * @deprecated Does not work anymore.
    */
   READ_ADAPTER_URL,
 
@@ -163,7 +163,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: BatteryStatus
+   * __Response Model__: BatteryStatusResponse
+   * @see BatteryStatusResponse
    * @see BatteryStatus
    */
   READ_BATTERY_INHIBITION_STATUS_URL,
@@ -180,7 +181,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: BatteryStatus
+   * __Response Model__: BatteryStatusResponse
+   * @see BatteryStatusResponse
    * @see BatteryStatus
    */
   READ_BATTERY_STATUS_URL,
@@ -200,7 +202,8 @@ export const KamereonApi = {
    * - `start`: <date> (format YYYYMMDD)
    * - `end`: <date> (format YYYYMMDD)
    *
-   * __Response Model__: ChargeHistory
+   * __Response Model__: ChargeHistoryResponse
+   * @see ChargeHistoryResponse
    * @see ChargeHistory
    */
   READ_CHARGE_HISTORY_URL,
@@ -217,7 +220,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: ChargeMode
+   * __Response Model__: ChargeModeResponse
+   * @see ChargeModeResponse
    * @see ChargeMode
    */
   READ_CHARGE_MODE_URL,
@@ -234,7 +238,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: ChargeSchedule
+   * __Response Model__: ChargeScheduleResponse
+   * @see ChargeScheduleResponse
    * @see ChargeSchedule
    */
   READ_CHARGE_SCHEDULE_URL,
@@ -252,7 +257,8 @@ export const KamereonApi = {
    * - `start`: <date> (format YYYYMMDD)
    * - `end`: <date> (format YYYYMMDD)
    *
-   * __Response Model__: Charges
+   * __Response Model__: ChargesResponse
+   * @see ChargesResponse
    * @see Charges
    */
   READ_CHARGES_URL,
@@ -269,7 +275,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: ChargingSettings
+   * __Response Model__: ChargingSettingsResponse
+   * @see ChargingSettingsResponse
    * @see ChargingSettings
    */
   READ_CHARGING_SETTINGS_URL,
@@ -286,7 +293,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__ : Cockpit
+   * __Response Model__: CockpitResponse
+   * @see CockpitResponse
    * @see Cockpit
    */
   READ_COCKPIT_URL,
@@ -306,7 +314,8 @@ export const KamereonApi = {
    * - `start`: <date> (format YYYYMMDD)
    * - `end`: <date> (format YYYYMMDD)
    *
-   * __Response Model__ : HvacHistory
+   * __Response Model__: HvacHistoryResponse
+   * @see HvacHistoryResponse
    * @see HvacHistory
    */
   READ_HVAC_HISTORY_URL,
@@ -320,12 +329,13 @@ export const KamereonApi = {
    * - `apikey`: KamereonApi.KEY
    * - `x-gigya-id_token`: <token> (from Gigya.getJWT API)
    *
-   * __Params__ :
+   * __Params__:
    * - `country`: <country code> (ex. "FR")
    * - `start`: <date> (format YYYYMMDD)
    * - `end`: <date> (format YYYYMMDD)
    *
-   * __Response Model__ : HvacSessions
+   * __Response Model__: HvacSessionsResponse
+   * @see HvacSessionsResponse
    * @see HvacSessions
    */
   READ_HVAC_SESSIONS_URL,
@@ -342,7 +352,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: HvacStatus
+   * __Response Model__: HvacStatusResponse
+   * @see HvacStatusResponse
    * @see HvacStatus
    */
   READ_HVAC_STATUS_URL,
@@ -359,7 +370,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: HvacSettings
+   * __Response Model__: HvacSettingsResponse
+   * @see HvacSettingsResponse
    * @see HvacSettings
    */
   READ_HVAC_SETTINGS_URL,
@@ -376,7 +388,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: VehicleLocation
+   * __Response Model__: VehicleLocationResponse
+   * @see VehicleLocationResponse
    * @see VehicleLocation
    */
   READ_LOCATION_URL,
@@ -393,7 +406,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: LockStatus
+   * __Response Model__: LockStatusResponse
+   * @see LockStatusResponse
    * @see LockStatus
    */
   READ_LOCK_STATUS_URL,
@@ -410,7 +424,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: NotificationSettings
+   * __Response Model__: NotificationSettingsResponse
+   * @see NotificationSettingsResponse
    * @see NotificationSettings
    */
   READ_NOTIFICATION_SETTINGS_URL,
@@ -427,7 +442,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: ResState
+   * __Response Model__: ResStateResponse
+   * @see ResStateResponse
    * @see ResState
    */
   READ_RES_STATE_URL,
@@ -444,7 +460,8 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Response Model__: Pressure
+   * __Response Model__: PressureResponse
+   * @see PressureResponse
    * @see Pressure
    */
   READ_PRESSURE_URL,
@@ -462,7 +479,7 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Body__ :
+   * __Body__:
    * {
    *   "data": {
    *      "type": "ChargeMode",
@@ -472,7 +489,8 @@ export const KamereonApi = {
    *   }
    * }
    *
-   * __Response Model__: ActionChargeMode
+   * __Response Model__: ActionChargeModeResponse
+   * @see ActionChargeModeResponse
    * @see ActionChargeMode
    */
   PERFORM_CHARGE_MODE_URL,
@@ -490,7 +508,7 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Body__ :
+   * __Body__:
    * {
    *   "data": {
    *      "type": "ChargeSchedule",
@@ -514,7 +532,8 @@ export const KamereonApi = {
    *   "duration": <minutes>
    * }
    *
-   * __Response Model__: ActionChargeSchedule
+   * __Response Model__: ActionChargeScheduleResponse
+   * @see ActionChargeScheduleResponse
    * @see ActionChargeSchedule
    */
   PERFORM_CHARGE_SCHEDULE_URL,
@@ -532,7 +551,7 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Body__ :
+   * __Body__:
    * {
    *    "data": {
    *      "type": "ChargingStart",
@@ -542,7 +561,8 @@ export const KamereonApi = {
    *    }
    * }
    *
-   * __Response Model__: ActionChargingStart
+   * __Response Model__: ActionChargingStartResponse
+   * @see ActionChargingStartResponse
    * @see ActionChargingStart
    */
   PERFORM_CHARGING_START_URL,
@@ -560,7 +580,7 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Body__ :
+   * __Body__:
    * {
    *   "data": {
    *     "type": "HvacSchedule",
@@ -581,7 +601,8 @@ export const KamereonApi = {
    *
    * HvacDaySchedule: { "readyAtTime": **<date>** }
    *
-   * __Response Model__: ActionHvacSchedule
+   * __Response Model__: ActionHvacScheduleResponse
+   * @see ActionHvacScheduleResponse
    * @see ActionHvacSchedule
    */
   PERFORM_HVAC_SCHEDULE_URL,
@@ -599,7 +620,7 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Body__ :
+   * __Body__:
    * {
    *   "data": {
    *     "type": "HvacStart",
@@ -622,7 +643,8 @@ export const KamereonApi = {
    *   }
    * }
    *
-   * __Response Model__: ActionHvacStart
+   * __Response Model__: ActionHvacStartResponse
+   * @see ActionHvacStartResponse
    * @see ActionHvacStart
    */
   PERFORM_HVAC_START_URL,
@@ -640,7 +662,7 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Body__ :
+   * __Body__:
    * {
    *    "data": {
    *      "type": "ChargePauseResume",
@@ -650,7 +672,8 @@ export const KamereonApi = {
    *    }
    * }
    *
-   * __Response Model__: ActionPauseResume
+   * __Response Model__: ActionPauseResumeResponse
+   * @see ActionPauseResumeResponse
    * @see ActionPauseResume
    */
   PERFORM_PAUSE_RESUME_URL,
@@ -668,15 +691,15 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Body__ :
+   * __Body__:
    * {
    *    "data": {
    *      "type": "RefreshBatteryStatus"
    *    }
    * }
    *
-   * __Response Model__: ActionRefreshBatteryStatus
-   * @see ActionRefreshBatteryStatus
+   * __Response Model__: ActionRefreshBatteryStatusResponse
+   * @see ActionRefreshBatteryStatusResponse
    */
   PERFORM_REFRESH_BATTERY_STATUS,
 
@@ -693,14 +716,15 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Body__ :
+   * __Body__:
    * {
    *    "data": {
    *      "type": "RefreshHvacStatus"
    *    }
    * }
    *
-   * __Response Model__: ActionRefreshHvacStatus
+   * __Response Model__: ActionRefreshHvacStatusResponse
+   * @see ActionRefreshHvacStatusResponse
    * @see ActionRefreshHvacStatus
    */
   PERFORM_REFRESH_HVAC_STATUS,
@@ -718,15 +742,15 @@ export const KamereonApi = {
    * __Params__:
    * - `country`: <country code> (ex. "FR")
    *
-   * __Body__ :
+   * __Body__:
    * {
    *    "data": {
    *      "type": "RefreshLocation"
    *    }
    * }
    *
-   * __Response Model__: ActionRefreshLocation
-   * @see ActionRefreshLocation
+   * __Response Model__: ActionRefreshLocationResponse
+   * @see ActionRefreshLocationResponse
    */
   PERFORM_REFRESH_LOCATION,
 };

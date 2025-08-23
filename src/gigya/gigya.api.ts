@@ -29,8 +29,8 @@ export const GigyaApi = {
    * - `loginID`: <login>
    * - `password`: <password>
    *
-   * __Response Model__: LoginInfo
-   * @see LoginInfo
+   * __Response Model__: LoginInfoResponse
+   * @see LoginInfoResponse
    */
   LOGIN_URL,
 
@@ -43,9 +43,9 @@ export const GigyaApi = {
    * - `apikey`: GigyaApi.KEY
    * - `login_token`: <token> (from Login API)
    *
-   * __Response Model__: AccountInfo
-   * (`personId` stored in AccountInfo.data.personId)
-   * @see AccountInfo
+   * __Response Model__: AccountInfoResponse
+   * (`personId` stored in AccountInfoResponse.data.personId)
+   * @see AccountInfoResponse
    */
   GET_ACCOUNT_INFO_URL,
 
@@ -60,8 +60,8 @@ export const GigyaApi = {
    * - `fields`: "data.personId,data.gigyaDataCenter"
    * - `expiration`: <ms> (expiration of the JWT)
    *
-   * __Response Model__: TokenInfo
-   * @see TokenInfo
+   * __Response Model__: TokenInfoResponse
+   * @see TokenInfoResponse
    */
   GET_JWT_URL,
 
@@ -74,8 +74,8 @@ export const GigyaApi = {
    * - `apikey`: GigyaApi.KEY
    * - `login_token`: <token> (from Login API)
    *
-   * __Response Model__: TokenPublicInfo
-   * @see TokenPublicInfo
+   * __Response Model__: TokenPublicInfoResponse
+   * @see TokenPublicInfoResponse
    */
   GET_JWT_PUBLIC_KEY_URL,
 
@@ -88,8 +88,8 @@ export const GigyaApi = {
    * - `apikey`: GigyaApi.KEY
    * - `login_token`: <token> (from Login API)
    *
-   * __Response Model__: LogoutInfo
-   * @see LogoutInfo
+   * __Response Model__: LogoutInfoResponse
+   * @see LogoutInfoResponse
    */
   LOGOUT_URL,
 };
