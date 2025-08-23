@@ -1,17 +1,10 @@
-import type { DateISO } from '../../shared.model';
+import type { DateISO } from '../../common.model';
 import type { PlugStatus } from './battery-status-enum.model';
-import type { DataResponse, Vin } from './kamereon.model';
+import type { DataResponse } from './kamereon.model';
 
-/**
- * Response model for Kamereon Battery API.
- */
-export type BatteryStatusData = DataResponse<Omit<BatteryStatus, 'id'>>;
+export type BatteryStatusResponse = DataResponse<BatteryStatus>;
 
-/**
- * Response model for Kamereon Battery API when request header "accept"="application/json".
- */
 export interface BatteryStatus {
-  id?: Vin;
   timestamp: DateISO;
   batteryLevel: number;
   batteryAutonomy: number;
@@ -26,8 +19,4 @@ export interface BatteryStatus {
 
 /* ------- */
 
-export type ActionRefreshBatteryStatusData = DataResponse<undefined, 'RefreshBatteryStatus'>
-
-export interface ActionRefreshBatteryStatus {
-  id: string;
-}
+export type ActionRefreshBatteryStatusResponse = DataResponse<undefined, 'RefreshBatteryStatus'>

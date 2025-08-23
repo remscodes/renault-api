@@ -1,10 +1,7 @@
-import type { DateISO } from '../../shared.model';
+import type { DateISO } from '../../common.model';
 import type { GigyaAuthResponse } from './gigya-response.model';
 
-/**
- * Response model of Gigya Account API.
- */
-export interface AccountInfo extends GigyaAuthResponse {
+export interface AccountInfoResponse extends GigyaAuthResponse {
   data: AccountData;
   preferences: AccountPreferences;
   emails: AccountEmails;

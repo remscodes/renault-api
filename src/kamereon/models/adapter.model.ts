@@ -1,4 +1,4 @@
-import type { DateISO } from '../../shared.model';
+import type { DateISO } from '../../common.model';
 import type { DataResponse } from './kamereon.model';
 
 export type AdapterType =
@@ -7,16 +7,8 @@ export type AdapterType =
 
 /* ------- */
 
-/**
- * Response model for Kamereon Adapter API.
- * @deprecated
- */
-export type AdapterInfoData = DataResponse<Omit<AdapterInfo, 'uuid'>>;
+export type AdapterInfoResponse = DataResponse<Omit<AdapterInfo, 'uuid'>>;
 
-/**
- * Response model for Kamereon Adapter API when request header "accept"="application/json".
- * @deprecated
- */
 export interface AdapterInfo {
   uuid: string;
   vin: string;

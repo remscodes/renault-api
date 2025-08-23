@@ -1,4 +1,4 @@
-import type { DateHH_MM, DateISO, Day } from '../../shared.model';
+import type { DateHH_mm, DateISO, DateTHH_mmZ, Day, Minutes } from '../../common.model';
 import type { DataResponse, Vin } from './kamereon.model';
 import type { Schedules } from './schedule.model';
 
@@ -20,46 +20,31 @@ export type ChargeScheduleInputs = Schedules<ChargeDaySchedule>;
 
 export interface ChargeDaySchedule {
   // Ex : T06:32Z
-  startTime?: string;
-  // minutes
-  duration?: number;
+  startTime: DateTHH_mmZ;
+  duration: Minutes;
 }
 
 /* ------- */
 
-/**
- * Response model for Kamereon Charge API.
- */
-export type ChargeHistoryData = DataResponse<Omit<ChargeHistory, 'id'>>
+export type ChargeHistoryResponse = DataResponse<ChargeHistory>
 
-/**
- * Response model for Kamereon Charge API when request header "accept"="application/json".
- */
 export interface ChargeHistory {
-  id?: Vin;
-  chargeSummaries?: ChargeSummary[];
+  chargeSummaries: ChargeSummary[];
 }
 
 export interface ChargeSummary {
-  day?: string,
-  month?: string
-  totalChargesNumber?: number,
-  totalChargesDuration?: number,
-  totalChargesErrors?: number
+  day: string,
+  month: string
+  totalChargesNumber: number,
+  totalChargesDuration: number,
+  totalChargesErrors: number
 }
 
 /* ------- */
 
-/**
- * Response model for Kamereon Charge API.
- */
-export type ChargeModeData = DataResponse<Omit<ChargeMode, 'id'>>
+export type ChargeModeResponse = DataResponse<ChargeMode>
 
-/**
- * Response model for Kamereon Charge API when request header "accept"="application/json".
- */
 export interface ChargeMode {
-  id: Vin;
   chargeMode: ChargeModeStatus;
 }
 
@@ -70,23 +55,16 @@ export type ChargeModeStatus =
 
 /* ------- */
 
-/**
- * Response model for Kamereon Charge API.
- */
-export type ChargeScheduleData = DataResponse<ChargeSchedule>
+export type ChargeScheduleResponse = DataResponse<ChargeSchedule>
 
-/**
- * Response model for Kamereon Charge API when request header "accept"="application/json".
- */
 export interface ChargeSchedule {
-  id: Vin;
   calendar: Calendar;
 }
 
 export type Calendar = Record<Day, Sched[]>
 
 interface Sched {
-  startTime: DateHH_MM;
+  startTime: DateHH_mm;
   duration: number;
   activationState: boolean;
 }
@@ -96,7 +74,7 @@ interface Sched {
 /**
  * Response model for Kamereon Charge API.
  */
-export type ChargesData = DataResponse<Omit<Charges, 'id'>>
+export type ChargesResponse = DataResponse<Omit<Charges, 'id'>>
 
 /**
  * Response model for Kamereon Charge API when request header "accept"="application/json".
@@ -121,54 +99,42 @@ export interface ChargeDetails {
 }
 
 type ChargeEndStatus =
-  |'ok'
+  | 'ok'
 
 type ChargePowerStatus =
-  |'slow'
+  | 'slow'
 
 /* ------- */
 
-/**
- * Response model for Kamereon Charge API.
- */
-export type ChargingSettingsData = DataResponse<Omit<ChargingSettings, 'id'>>
+export type ChargingSettingsResponse = DataResponse<ChargingSettings>
 
-/**
- * Response model for Kamereon Charge API when request header "accept"="application/json".
- */
 export interface ChargingSettings extends Schedules<ChargeDaySchedule> {
-  id: Vin;
   dateTime: DateISO;
   mode: ChargeModeStatus;
 }
 
 /* ------- */
 
+export type ActionChargeModeResponse = DataResponse<ActionChargeMode>
+
 export interface ActionChargeMode {
-  id: string;
   action: ChargeModeAction;
 }
 
 /* ------- */
 
-export type ActionChargeScheduleData = DataResponse<Omit<ActionChargeSchedule, 'id'>>
+export type ActionChargeScheduleResponse = DataResponse<ActionChargeSchedule>
 
-export interface ActionChargeSchedule {
-  id: string;
-}
+export interface ActionChargeSchedule {}
 
 /* ------- */
 
-export type ActionChargingStartData = DataResponse<Omit<ActionChargeMode, 'id'>>
+export type ActionChargingStartResponse = DataResponse<ActionChargingStart>
 
-export interface ActionChargingStart {
-  id: string;
-}
+export interface ActionChargingStart {}
 
 /* ------- */
 
-export type ActionPauseResumeData = DataResponse<Omit<ActionPauseResume, 'id'>>
+export type ActionPauseResumeResponse = DataResponse<ActionPauseResume>
 
-export interface ActionPauseResume {
-  id: string;
-}
+export interface ActionPauseResume {}

@@ -1,8 +1,5 @@
-import type { DateISO } from '../../shared.model';
+import type { DateISO } from '../../common.model';
 
-/**
- * Response model for Kamereon Person API.
- */
 export interface Person {
   personId: string;
   type: string;

@@ -1,5 +1,5 @@
-import type { DateISO } from '../../shared.model';
-import type { DataResponse, Vin } from './kamereon.model';
+import type { DateISO } from '../../common.model';
+import type { DataResponse } from './kamereon.model';
 import type { Schedules } from './schedule.model';
 
 export interface HvacStartInputs {
@@ -17,38 +17,21 @@ export interface HvacDaySchedule {
 
 /* ------- */
 
-export type HvacHistoryData = DataResponse<HvacHistory>
+export type HvacHistoryResponse = DataResponse<HvacHistory>
 
-export interface HvacHistory {
-
-}
+export interface HvacHistory {}
 
 /* ------- */
 
-/**
- * Response model for Kamereon HVAC API.
- */
-export type HvacSessionsData = DataResponse<HvacSessions>
+export type HvacSessionsResponse = DataResponse<HvacSessions>
 
-/**
- * Response model for Kamereon HVAC API when request header "accept"="application/json".
- */
-export interface HvacSessions {
-
-}
+export interface HvacSessions {}
 
 /* ------- */
 
-/**
- * Response model for Kamereon HVAC API.
- */
-export type HvacStatusData = DataResponse<HvacStatus>
+export type HvacStatusResponse = DataResponse<HvacStatus>
 
-/**
- * Response model for Kamereon HVAC API when request header "accept"="application/json".
- */
 export interface HvacStatus {
-  id: Vin;
   socThreshold: number;
   hvacStatus: HvacStatusType;
   lastUpdateTime: DateISO;
@@ -60,16 +43,9 @@ export type HvacStatusType =
 
 /* ------- */
 
-/**
- * Response model for Kamereon HVAC API.
- */
-export type HvacSettingsData = DataResponse<Omit<HvacSettings, 'id'>>
+export type HvacSettingsResponse = DataResponse<HvacSettings>
 
-/**
- * Response model for Kamereon HVAC API when request header "accept"="application/json".
- */
 export interface HvacSettings extends Schedules<HvacDaySchedule, { targetTemperature?: number }> {
-  id: Vin;
   dateTime: DateISO;
   mode: HvacMode;
   globalTargetTemperature: number;
@@ -80,24 +56,16 @@ export type HvacMode =
 
 /* ------- */
 
-export type ActionRefreshHvacStatusData = DataResponse<undefined, 'RefreshHvacStatus'>
-
-export interface ActionRefreshHvacStatus {
-  id: string;
-}
+export type ActionRefreshHvacStatusResponse = DataResponse<undefined, 'RefreshHvacStatus'>
 
 /* ------- */
 
-export type ActionHvacScheduleData = DataResponse<Omit<ActionHvacSchedule, 'id'>>
+export type ActionHvacScheduleResponse = DataResponse<ActionHvacSchedule>
 
-export interface ActionHvacSchedule {
-  id: string;
-}
+export interface ActionHvacSchedule {}
 
 /* ------- */
 
-export type ActionHvacStartData = DataResponse<Omit<ActionHvacStart, 'id'>>
+export type ActionHvacStartResponse = DataResponse<ActionHvacStart>
 
-export interface ActionHvacStart {
-  id: string;
-}
+export interface ActionHvacStart {}

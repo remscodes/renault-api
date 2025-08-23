@@ -1,6 +1,6 @@
-import type { Prefix } from '../../shared.model';
+import type { Prefix, Uuid } from '../../common.model';
 
-type KcaEndpoint =
+export type KcaEndpoint =
   | ''
   | 'battery-status'
   | 'battery-inhibition-status'
@@ -24,7 +24,7 @@ export type ReadEndpoint = KcaEndpoint;
 
 /* ------- */
 
-type KcaAction =
+export type KcaAction =
   | 'charge-mode'
   | 'charge-schedule'
   | 'charging-start'
@@ -50,9 +50,9 @@ export interface DataResponse<A, T = 'Car'> {
   data: Data<A, T>;
 }
 
-interface Data<A, T> {
+export interface Data<A, T> {
   type: T;
-  id: Vin | AccountId | string;
+  id: Vin | AccountId | Uuid;
   attributes: A;
 }
 
@@ -66,11 +66,11 @@ export interface Action extends Version {
   type: ActionType;
 }
 
-type ActionType =
+export type ActionType =
   | KcaActionType
   | KcmActionType
 
-type KcaActionType =
+export type KcaActionType =
   | 'ChargeMode'
   | 'ChargeSchedule'
   | 'ChargingStart'
@@ -81,7 +81,7 @@ type KcaActionType =
   | 'RefreshLocation'
   | 'SendNavigation'
 
-type KcmActionType =
+export type KcmActionType =
   | 'ChargePauseResume'
 
 /* ------- */

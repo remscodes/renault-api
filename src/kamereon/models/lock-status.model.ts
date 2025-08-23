@@ -1,16 +1,9 @@
-import type { DateISO } from '../../shared.model';
-import type { DataResponse, Vin } from './kamereon.model';
+import type { DateISO } from '../../common.model';
+import type { DataResponse } from './kamereon.model';
 
-/**
- * Response model for Kamereon Lock API.
- */
-export type LockStatusData = DataResponse<Omit<LockStatus, 'id'>>
+export type LockStatusResponse = DataResponse<LockStatus>
 
-/**
- * Response model for Kamereon Lock API when request header "accept"="application/json".
- */
 export interface LockStatus {
-  id: Vin;
   doorStatusFrontLeft: LockType;
   doorStatusFrontRight: LockType;
   doorStatusRearLeft: LockType;

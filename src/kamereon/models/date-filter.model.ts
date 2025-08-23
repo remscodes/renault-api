@@ -1,4 +1,4 @@
-import type { DateISO } from '../../shared.model';
+import type { DateISO } from '../../common.model';
 
 export interface DateFilter {
   period: Period;

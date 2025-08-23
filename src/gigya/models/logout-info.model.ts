@@ -1,9 +1,6 @@
 import type { GigyaResponse } from './gigya-response.model';
 
-/**
- * Response model of Gigya Logout API.
- */
-export interface LogoutInfo extends GigyaResponse {
+export interface LogoutInfoResponse extends GigyaResponse {
   connectedProviders: string;
   UID: string;
   logoutActiveSession: boolean;

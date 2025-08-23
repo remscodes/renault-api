@@ -1,15 +1,8 @@
-import type { DataResponse, Vin } from './kamereon.model';
+import type { DataResponse } from './kamereon.model';
 
-/**
- * Response model for Kamereon Pressure API.
- */
-export type PressureData = DataResponse<Pressure>
+export type PressureResponse = DataResponse<Pressure>
 
-/**
- * Response model for Kamereon Pressure API when request header "accept"="application/json".
- */
 export interface Pressure {
-  id: Vin;
   flPressure: number;
   frPressure: number;
   rlPressure: number;
