@@ -36,7 +36,7 @@ url.searchParams.set('loginID', 'my-renault-login');
 url.searchParams.set('password', 'my-renault-password');
 
 const response: LoginInfoResponse = await fetch(url, { method: 'POST' }).then(r => r.json());
-const {} = response;
+const { cookieValue } = response.sessionInfo;
 ```
 
 ```ts
