@@ -1,3 +1,13 @@
+# 2.0.0 (2025-08-23)
+
+### Update
+
+- Update models/JSDocs.
+- Add the Pressure API response model and docs.
+- Update dependencies.
+
+> Commits : https://github.com/remscodes/renault-api/commits/v2.0.0
+
 # 1.2.4 (2025-01-30)
 
 ### Update
